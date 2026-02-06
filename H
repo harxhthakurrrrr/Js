@@ -1,1 +1,139 @@
-Hello JS.
+JavaScript Quick Notes (One-Liners)
+
+var: Function-scoped variable jo hoist hota hai aur default value undefined hoti hai.
+
+let: Block-scoped variable jo hoist hota hai par TDZ ki wajah se pehle access nahi hota.
+
+const: Block-scoped constant jo hoist hota hai par TDZ me rehta hai aur reassign nahi hota.
+
+Hoisting: JavaScript execution se pehle variables aur functions ke liye memory allocate kar deta hai.
+
+TDZ (Temporal Dead Zone): Block ke start aur let/const declaration ke beech ka time jahan access error deta hai.
+
+Scope: Ye define karta hai ki variable code ke kis part me accessible hai.
+
+Global Scope: Global me declared variables poore program me accessible hote hain.
+
+Function Scope: Function ke andar declared variables bahar access nahi hote.
+
+Block Scope: { } ke andar let aur const limited hote hain.
+
+Lexical Scope: jab koi gloabl  variable  kisse nested function use  global variable koa acuess kar sakhte hai hai vo lexical scope me aata hai agar uske variable koham function ke baad access karege par acess nahi kaar paayege simple yeh bol sakhe hai jab koi parent function koi outpure function ke variable lki value koacueess kar sakhte hai lexical scope me aata hai 
+
+Closure: Function apne outer scope ke variables ko yaad rakhta hai even after execution. jab parent dunctoon function or inner function apne parent ki value ko store karte hai vo close function bloltebhaib  
+
+
+Function: Reusable block of code jo specific task perform karta hai.
+
+Block: { } code ka logical group hota hai jo scope create karta hai.
+
+/////////////////////////////////////////////////example///////////////////////////////////////////////
+Done 👍 **same file me one-line + short example** (simple readme style) 👇
+
+---
+
+# JavaScript Quick Notes with Examples
+
+* **`var`**: Function-scoped hota hai aur hoist ho kar `undefined` deta hai.
+
+```js
+console.log(a); // undefined
+var a = 10;
+```
+
+* **`let`**: Block-scoped hota hai aur TDZ ki wajah se pehle access nahi hota.
+
+```js
+// console.log(b); ❌
+let b = 20;
+```
+
+* **`const`**: Block-scoped hota hai aur value change nahi hoti.
+
+```js
+const c = 30;
+// c = 40 ❌
+```
+
+* **Hoisting**: Declarations execution se pehle memory me aa jate hain.
+
+```js
+sayHi();
+function sayHi() {
+  console.log("Hi");
+}
+```
+
+* **TDZ**: `let/const` declare hone se pehle use karna error deta hai.
+
+```js
+// console.log(x); ❌
+let x = 5;
+```
+
+* **Scope**: Variable kaha accessible hai ye batata hai.
+
+```js
+function test() {
+  let a = 10;
+}
+// a ❌
+```
+
+* **Lexical Scope**: Inner function outer variables access kar sakta hai.
+
+```js
+let name = "Rahul";
+function outer() {
+  function inner() {
+    console.log(name);
+  }
+  inner();
+}
+```
+
+* **Closure**: Function outer variable ko yaad rakhta hai.
+
+```js
+function outer() {
+  let count = 0;
+  return function () {
+    count++;
+    console.log(count);
+  };
+}
+const fn = outer();
+fn(); // 1
+```
+
+* **Block**: `{ }` ek scope banata hai `let/const` ke liye.
+
+```js
+{
+  let x = 10;
+}
+// x ❌
+```
+
+* **Function**: Reusable code block hota hai.
+
+```js
+function add(a, b) {
+  return a + b;
+}
+```
+
+---
+
+Agar chaho to main isko **pure README.md format** ya **PDF notes** bana deta hoon 📄🔥
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Event Loop :-
+
+
+
+
+
+
