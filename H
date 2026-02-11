@@ -1,139 +1,310 @@
-JavaScript Quick Notes (One-Liners)
+1-Variable In Js :- variable EK Container Hota Hai jisme Ham Apna Data Store Karte Hai  
+  Variable Jo Hote Hai vo 3 Type Ke Hote hai
 
-var: Function-scoped variable jo hoist hota hai aur default value undefined hoti hai.
+1-Var - . Var ek Purana Variable Hai Purana Variable Isliye Tha kyoki Variable Me Ham Jab Be kuch Defiend karte The Vo koi Error Throght Nahi karta hai OR yeh Bhoot Risky Hota Hai  For Example :-
+var score = 100;
+var score = 200; 
+// Yeh Koi error Define Karne Simple Allowed Kar Lenga Par LEt COnst ME AIse NAhi HOte HAi VO Aise NAhi KArte HAi VO Error De Deta hai 
 
-let: Block-scoped variable jo hoist hota hai par TDZ ki wajah se pehle access nahi hota.
+//Redclare Or Reassign be kar sakhte hai mtlba uske mtlab 
+Re-declare (Same naam ka variable dobara banana)  Hai Or Reassign (Value change karna)
+Example 
+var scope =  20
+scope = 30
 
-const: Block-scoped constant jo hoist hota hai par TDZ me rehta hai aur reassign nahi hota.
-
-Hoisting: JavaScript execution se pehle variables aur functions ke liye memory allocate kar deta hai.
-
-TDZ (Temporal Dead Zone): Block ke start aur let/const declaration ke beech ka time jahan access error deta hai.
-
-Scope: Ye define karta hai ki variable code ke kis part me accessible hai.
-
-Global Scope: Global me declared variables poore program me accessible hote hain.
-
-Function Scope: Function ke andar declared variables bahar access nahi hote.
-
-Block Scope: { } ke andar let aur const limited hote hain.
-
-Lexical Scope: jab koi gloabl  variable  kisse nested function use  global variable koa acuess kar sakhte hai hai vo lexical scope me aata hai agar uske variable koham function ke baad access karege par acess nahi kaar paayege simple yeh bol sakhe hai jab koi parent function koi outpure function ke variable lki value koacueess kar sakhte hai lexical scope me aata hai 
-
-Closure: Function apne outer scope ke variables ko yaad rakhta hai even after execution. jab parent dunctoon function or inner function apne parent ki value ko store karte hai vo close function bloltebhaib  
+console.log(scope)///reassign
 
 
-Function: Reusable block of code jo specific task perform karta hai.
+var age = 20;
+var age = 30;   // dubara declare
+console.log(age);/// ReDeclare
 
-Block: { } code ka logical group hota hai jo scope create karta hai.
 
-/////////////////////////////////////////////////example///////////////////////////////////////////////
-Done 👍 **same file me one-line + short example** (simple readme style) 👇
+/////
+ 
 
----
 
-# JavaScript Quick Notes with Examples
 
-* **`var`**: Function-scoped hota hai aur hoist ho kar `undefined` deta hai.
+2-Let : let be same hota hai but uske ko reassign kar sakhte hai but re 
+Reclare nahi kar sakhte hai 
+Example
+let age = 20;
+age = 25;  
+console.log(age),,
 
-```js
-console.log(a); // undefined
-var a = 10;
-```
 
-* **`let`**: Block-scoped hota hai aur TDZ ki wajah se pehle access nahi hota.
 
-```js
-// console.log(b); ❌
-let b = 20;
-```
 
-* **`const`**: Block-scoped hota hai aur value change nahi hoti.
+let age = 20
+let age = 30;
+console.log(age) yeh eerrro deta hai hai 
 
-```js
-const c = 30;
-// c = 40 ❌
-```
 
-* **Hoisting**: Declarations execution se pehle memory me aa jate hain.
 
-```js
-sayHi();
-function sayHi() {
-  console.log("Hi");
+
+ 
+3-Const  par const ka na delacre  kar sakhte hai na re assign kar sakhte hai Const ek variable keyword hai jisme value fix (constant) hoti hai.
+Matlab ek baar value de di → dobara change nahi kar sakte.
+example 
+const age = 20;
+age = 25;   // error 
+
+
+
+
+const age = 10;'const age = 10, /// error 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Scope IN Variable  :-  Variable ko hum kahan se access kar sakte hain Kha use Kar sakhte Hai 
+
+
+
+1-Global Scope :- 
+Jo variable sabse bahar declare hota hai
+Or Har Global Khayi be acuus  be kar sakhte hai konsaBe Variale Ho 
+Pure program me kahin se bhi access ho sakta hai. 
+Example :- 
+
+  
+
+
+let name = "Harshu";/// Global Scope 
+
+function greet() {
+  console.log("Hello " + name);
 }
-```
 
-* **TDZ**: `let/const` declare hone se pehle use karna error deta hai.
 
-```js
-// console.log(x); ❌
-let x = 5;
-```
+greet();
+ console.log("Hello " + name);
 
-* **Scope**: Variable kaha accessible hai ye batata hai.
 
-```js
+
+2-Function Scope :-Var Hamara Function Scope HOta hai Sirf us function ke andar accessible hoga agar Function ke bahar ❌ error
+Example 
 function test() {
-  let a = 10;
+  var a = 10;
 }
-// a ❌
-```
 
-* **Lexical Scope**: Inner function outer variables access kar sakta hai.
+console.log(a); // ❌ Error
 
-```js
-let name = "Rahul";
-function outer() {
-  function inner() {
-    console.log(name);
+
+Agar var {} ke andar bana
+Wo pura function me accessible hoga
+Example :-
+
+function test() {
+  if (true) {
+    var x = 20;
   }
-  inner();
+
+  console.log(x); // ✅ chalega
 }
-```
+Function ko maanta hai
 
-* **Closure**: Function outer variable ko yaad rakhta hai.
+Block ko ignore karta hai 
+Tumne var x ko block me likha
 
-```js
-function outer() {
-  let count = 0;
-  return function () {
-    count++;
-    console.log(count);
-  };
+BUT JavaScript ne usko aise treat kiya jaise yeh function ke top pe likha ho.//// Important
+function test() {
+  var x =10;      // hoisted to function top
+
+  if (true) {
+    x = 10;
+  }
+
+  console.log(x);
 }
-const fn = outer();
-fn(); // 1
-```
 
-* **Block**: `{ }` ek scope banata hai `let/const` ke liye.
 
-```js
-{
-  let x = 10;
+
+
+2- Block Scope :- let aur const Block Scoped hote hain { } ke bahar access nahi hoga
+function test() {
+  if (true) {
+    let x = 10;
+    const y = 20;
+  }
+
+  console.log(x); // ❌ Error
+  console.log(y); // ❌ Error
 }
-// x ❌
-```
 
-* **Function**: Reusable code block hota hai.
+x aur y sirf if block ke andar exist karte hain
+Block ke bahar unka wajood hi nahi
 
-```js
-function add(a, b) {
-  return a + b;
+
+
+Function ke andar (no inner block):-
+function test() {
+  let a = 5;
+  const b = 10;
+
+  console.log(a); // ✅
+  console.log(b); // ✅
 }
-```
-
----
-
-Agar chaho to main isko **pure README.md format** ya **PDF notes** bana deta hoon 📄🔥
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+Yeh chalega kyunki:
 
-Event Loop :-
+Function ka {} hi block hai
+
+Aur tum same block me access kar rahe ho
 
 
 
+Block kahan milta hai?:-
 
+if
+
+for
+
+while
+
+switch
+
+function ka body bhi { } hota hai
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Hosting And TDZ  Kya hote hai :- Hosting Hote Hai Hamre Variable Me HOte hIa jab kiske Variable Ko Defien Karne Se Uski Value KO Acuus karna Yeh Hote Hai Hosting Jaise Hamre # Variable Hote  hai Let Const Var  jab Ham Inno me yeh Kaam karte Define karne Se Phle USko Accuss KArne Hai  To alag behavior Hota Hai 
+
+Example 
+Var
+
+console.log(a);
+var a = 10;
+
+
+
+OutPut :-undefined
+Kyun?
+JS internally isko aise treat karta hai:
+var a;
+console.log(a)
+a= 10;
+
+
+
+LEt :- 
+console.log(b);
+let b = 20;
+❌ Error aayega.
+Kyuki let hoist hota hai
+par access nahi kar sakte (TDZ).
+
+
+
+
+
+Const :-
+
+console.log(c);
+const c = 30;
+❌ Error aayega.
+
+
+JavaScript ka kaam karne ka tareeka:-
+1-Memory Creation Phase
+Variables ko memory me jagah milti hai
+Functions pura store ho jate hain
+2- Execution Phase
+Code line by line execute hota hai
+
+
+
+Ab dekho var ke saath kya hota hai
+
+Example:-
+console.log(a);
+var a = 10;
+
+
+Memory Phase me:
+a = undefined
+
+
+Execution Phase:
+console.log(a); → undefined
+a = 10;
+Isliye error nahi aata.
+
+
+
+Ab let ke saath dekho:-
+console.log(b);
+let b = 20;
+Memory Phase me:
+b = <uninitialized>
+⚠️ Yaha difference hai.
+var ko undefined milta hai
+let ko milta hai: uninitialized
+
+Execution Phase:
+
+Jab tak let b = 20 wali line nahi aati
+Tab tak b TDZ me rehta hai
+
+Isliye error aata hai.
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+🟢 Data Type
+👉 Data Type batata hai ki variable ke andar kis type ka data store hai
+Matlab:
+
+Number hai?
+
+Text hai?
+
+True/False hai?
+
+Object hai?
+Example 
+let age = 22;        // Number
+let name = "Harshu"; // String
+let isLogin = true;  // Boolean
+🟡 Data Type ki zarurat kyu?
+Kyuki JavaScript ko pata hona chahiye:
+
+Addition kare ya string join kare?
+
+True/False check kare?
+
+Object ke andar property dhoonde?
+Example :-
+let a = 10;
+let b = "10";
+
+console.log(a + b);
+output 1010
+🔵 JS me 2 Main Category
+1️⃣ Primitive (Simple Value)
+
+Number
+
+String
+
+Boolean
+
+Undefined
+
+Null
+
+BigInt
+
+Symbol
+
+2️⃣ Non-Primitive (Reference)
+
+Object
+
+Array
+
+Function
+🎯 Simple Line
+
+Data Type decide karta hai:
+👉 Data ka behaviour kya hoga
+👉 Memory me kaise store hoga
+👉 Operations kaise work karenge
 
 
