@@ -1,14 +1,14 @@
 1-Variable In Js :- variable EK Container Hota Hai jisme Ham Apna Data Store Karte Hai  
-  Variable Jo Hote Hai vo 3 Type Ke Hote hai
+Variable Jo Hote Hai vo 3 Type Ke Hote hai
 
 1-Var - . Var ek Purana Variable Hai Purana Variable Isliye Tha kyoki Variable Me Ham Jab Be kuch Defiend karte The Vo koi Error Throght Nahi karta hai OR yeh Bhoot Risky Hota Hai  For Example :-
 var score = 100;
-var score = 200; 
-// Yeh Koi error Define Karne Simple Allowed Kar Lenga Par LEt COnst ME AIse NAhi HOte HAi VO Aise NAhi KArte HAi VO Error De Deta hai 
+var score = 200;
+// Yeh Koi error Define Karne Simple Allowed Kar Lenga Par LEt COnst ME AIse NAhi HOte HAi VO Aise NAhi KArte HAi VO Error De Deta hai
 
-//Redclare Or Reassign be kar sakhte hai mtlba uske mtlab 
+//Redclare Or Reassign be kar sakhte hai mtlba uske mtlab
 Re-declare (Same naam ka variable dobara banana)  Hai Or Reassign (Value change karna)
-Example 
+Example
 var scope =  20
 scope = 30
 
@@ -21,15 +21,15 @@ console.log(age);/// ReDeclare
 
 
 /////
- 
 
 
 
-2-Let : let be same hota hai but uske ko reassign kar sakhte hai but re 
-Reclare nahi kar sakhte hai 
+
+2-Let : let be same hota hai but uske ko reassign kar sakhte hai but re
+Reclare nahi kar sakhte hai
 Example
 let age = 20;
-age = 25;  
+age = 25;
 console.log(age),,
 
 
@@ -37,55 +37,55 @@ console.log(age),,
 
 let age = 20
 let age = 30;
-console.log(age) yeh eerrro deta hai hai 
+console.log(age) yeh eerrro deta hai hai
 
 
 
 
- 
+
 3-Const  par const ka na delacre  kar sakhte hai na re assign kar sakhte hai Const ek variable keyword hai jisme value fix (constant) hoti hai.
 Matlab ek baar value de di → dobara change nahi kar sakte.
-example 
+example
 const age = 20;
-age = 25;   // error 
+age = 25;   // error
 
 
 
 
-const age = 10;'const age = 10, /// error 
+const age = 10;'const age = 10, /// error
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-Scope IN Variable  :-  Variable ko hum kahan se access kar sakte hain Kha use Kar sakhte Hai 
+Scope IN Variable  :-  Variable ko hum kahan se access kar sakte hain Kha use Kar sakhte Hai
 
 
 
-1-Global Scope :- 
+1-Global Scope :-
 Jo variable sabse bahar declare hota hai
-Or Har Global Khayi be acuus  be kar sakhte hai konsaBe Variale Ho 
-Pure program me kahin se bhi access ho sakta hai. 
-Example :- 
-
-  
+Or Har Global Khayi be acuus  be kar sakhte hai konsaBe Variale Ho
+Pure program me kahin se bhi access ho sakta hai.
+Example :-
 
 
-let name = "Harshu";/// Global Scope 
+
+
+let name = "Harshu";/// Global Scope
 
 function greet() {
-  console.log("Hello " + name);
+console.log("Hello " + name);
 }
 
 
 greet();
- console.log("Hello " + name);
+console.log("Hello " + name);
 
 
 
 2-Function Scope :-Var Hamara Function Scope HOta hai Sirf us function ke andar accessible hoga agar Function ke bahar ❌ error
-Example 
+Example
 function test() {
-  var a = 10;
+var a = 10;
 }
 
 console.log(a); // ❌ Error
@@ -96,26 +96,26 @@ Wo pura function me accessible hoga
 Example :-
 
 function test() {
-  if (true) {
-    var x = 20;
-  }
+if (true) {
+var x = 20;
+}
 
-  console.log(x); // ✅ chalega
+console.log(x); // ✅ chalega
 }
 Function ko maanta hai
 
-Block ko ignore karta hai 
+Block ko ignore karta hai
 Tumne var x ko block me likha
 
 BUT JavaScript ne usko aise treat kiya jaise yeh function ke top pe likha ho.//// Important
 function test() {
-  var x =10;      // hoisted to function top
+var x =10;      // hoisted to function top
 
-  if (true) {
-    x = 10;
-  }
+if (true) {
+x = 10;
+}
 
-  console.log(x);
+console.log(x);
 }
 
 
@@ -123,13 +123,13 @@ function test() {
 
 2- Block Scope :- let aur const Block Scoped hote hain { } ke bahar access nahi hoga
 function test() {
-  if (true) {
-    let x = 10;
-    const y = 20;
-  }
+if (true) {
+let x = 10;
+const y = 20;
+}
 
-  console.log(x); // ❌ Error
-  console.log(y); // ❌ Error
+console.log(x); // ❌ Error
+console.log(y); // ❌ Error
 }
 
 x aur y sirf if block ke andar exist karte hain
@@ -139,11 +139,11 @@ Block ke bahar unka wajood hi nahi
 
 Function ke andar (no inner block):-
 function test() {
-  let a = 5;
-  const b = 10;
+let a = 5;
+const b = 10;
 
-  console.log(a); // ✅
-  console.log(b); // ✅
+console.log(a); // ✅
+console.log(b); // ✅
 }
 
 
@@ -167,9 +167,9 @@ switch
 
 function ka body bhi { } hota hai
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Hosting And TDZ  Kya hote hai :- Hosting Hote Hai Hamre Variable Me HOte hIa jab kiske Variable Ko Defien Karne Se Uski Value KO Acuus karna Yeh Hote Hai Hosting Jaise Hamre # Variable Hote  hai Let Const Var  jab Ham Inno me yeh Kaam karte Define karne Se Phle USko Accuss KArne Hai  To alag behavior Hota Hai 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Hosting And TDZ  Kya hote hai :- Hosting Hote Hai Hamre Variable Me HOte hIa jab kiske Variable Ko Defien Karne Se Uski Value KO Acuus karna Yeh Hote Hai Hosting Jaise Hamre # Variable Hote  hai Let Const Var  jab Ham Inno me yeh Kaam karte Define karne Se Phle USko Accuss KArne Hai  To alag behavior Hota Hai
 
-Example 
+Example
 Var
 
 console.log(a);
@@ -186,7 +186,7 @@ a= 10;
 
 
 
-LEt :- 
+LEt :-
 console.log(b);
 let b = 20;
 ❌ Error aayega.
@@ -208,7 +208,8 @@ JavaScript ka kaam karne ka tareeka:-
 1-Memory Creation Phase
 Variables ko memory me jagah milti hai
 Functions pura store ho jate hain
-2- Execution Phase
+
+# 2- Execution Phase
 Code line by line execute hota hai
 
 
@@ -248,7 +249,7 @@ Tab tak b TDZ me rehta hai
 Isliye error aata hai.
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 🟢 Data Type
-👉 Data Type batata hai ki variable ke andar kis type ka data store hai
+👉 Data Type batata hai ki variable ke andar kis type ka data store haiz
 Matlab:
 
 Number hai?
@@ -258,10 +259,14 @@ Text hai?
 True/False hai?
 
 Object hai?
-Example 
+Example
 let age = 22;        // Number
 let name = "Harshu"; // String
 let isLogin = true;  // Boolean
+
+
+
+
 🟡 Data Type ki zarurat kyu?
 Kyuki JavaScript ko pata hona chahiye:
 
@@ -270,6 +275,8 @@ Addition kare ya string join kare?
 True/False check kare?
 
 Object ke andar property dhoonde?
+
+
 Example :-
 let a = 10;
 let b = "10";
@@ -306,5 +313,288 @@ Data Type decide karta hai:
 👉 Data ka behaviour kya hoga
 👉 Memory me kaise store hoga
 👉 Operations kaise work karenge
+
+
+
+Non-Primitive ko “Reference Type” kyun bolte hain?
+Kyuki yeh value ko directly store nahi karte.
+Yeh memory address (reference) store karte hain
+Kya HOta Primitive me data copy hote hai no porimatice uske varibel yha function yha object me ek dusre variable  me Store Hote HAi Inme reference milta hai Matlab dono same memory ko point karte hain
+Example:
+Primative Example :
+let a = 10;
+let b = a;
+
+b = 20;
+
+console.log(a); // 10
+👉 Inme reference nahi hota
+👉 Inme value ki copy milti hai
+
+
+
+Example:
+Non Primative (Refersh Type )
+let arr1 = [1,2];
+let arr2 = arr1;
+
+arr2.push(3);
+
+console.log(arr1); // [1,2,3]
+
+👉 Inme reference milta hai
+👉 Matlab dono same memory ko point karte hain
+
+
+
+
+Typeof :-
+typeof ek operator hai jo batata hai ki
+variable ka data type kya hai.
+
+
+
+// Primitives
+let age = 22;                  // number
+let name = "Harsh";            // string
+let isStudent = true;          // boolean
+let job;                       // undefined
+let empty = null;              // null
+
+console.log(typeof age);       // "number"
+console.log(typeof name);      // "string"
+console.log(typeof isStudent); // "boolean"
+console.log(typeof job);       // "undefined"
+console.log(typeof empty);     // "object" ← famous bug!
+
+// Type matters in operations
+console.log(5 + 3);            // 8
+console.log("5" + 3);          // "53" ← string join
+console.log("5" - 3);          // 2   ← string number mein convert
+console.log(10 + true);        // 11  (true = 1)
+
+// Non-primitive
+let person = { name: "Harsh", city: "UP" };
+let hobbies = ["coding", "gaming"];
+console.log(typeof person);    // "object"
+console.log(typeof hobbies);   // "object"
+console.log(typeof console.log); // "function"
+///////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+Type Conversion And Operation :-
+Ek Data Type ko Dusre Data Type me me convert karna Yeh TYpe Conversion 
+type conversion 2 type ke hote hai
+
+ 
+implicit conversion(Automatic,Type Coercion (Implicit)):-  
+Jisme javascript covert karte hai
+let a = "5";
+let b = 2;
+
+console.log(a + b);
+Output:"52"
+Kyuki string mila → JS ne number ko string bana diya.
+
+
+
+2.explicit conversion(Type Conversion (Explicit)) :-
+Hum khud convert karte hain.
+let a = "5";
+
+console.log(Number(a)); // 5
+console.log(String(10)); // "10"
+console.log(Boolean(1)); // true
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+{(Falsy Values yaad rakh (bahut important)
+Sirf ye values false hoti hain:
+
+0
+
+"" (empty string)
+
+null
+
+undefined
+
+NaN
+
+false
+
+Inke alawa sab true hote hain.)}
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+Operators:-
+1️⃣ Arithmetic Operators (+, -, *, /, %)
+2️⃣ Comparison Operators (==, ===, !=, !==, >, <)
+3️⃣ Logical Operators (&&, ||, !)
+4️⃣ Assignment Operators
+5️⃣ Ternary Operator
+
+
+Arithmetic Operators:-
+
+
+Yeh numbers pe calculations karte hain.
+Example :-
+let a = 10;
+let b = 3;
+
+console.log(a + b);   // 13//addtination 
+console.log(a - b);   // 7// subtraction
+console.log(a * b);   // 30 multiplication
+console.log(a / b);   // 3.333...//Division
+console.log(a % b);   // 1 (shesh) Modulus (%)
+console.log(a ** 2);  // 100 (10 ki power 2)
+let a = 5;
+a++;///////////INcremenet 
+console.log(a); // 6
+
+let a = 5;
+a--;           /// Decrement 
+console.log(a); // 6
+
+
+
+Comparison Operators List:-
+
+
+| Operator | Matlab                      |
+| -------- | --------------------------- |
+| `>`      | Greater than                |
+| `<`      | Less than                   |
+| `>=`     | Greater than equal          |
+| `<=`     | Less than equal             |
+| `==`     | Equal (value check)         |
+| `===`    | Strict equal (value + type) |
+| `!=`     | Not equal                   |
+| `!==`    | Strict not equal            |
+
+
+🟢 NaN kya hota hai?
+
+👉 NaN = Not a Number
+Matlab result number hona chahiye tha
+mtlab value Number hone chiayte the vo no=umber anhi ho  paaye 
+
+
+
+
+
+
+
+
+
+🔵 1️⃣ Number vs Number
+Example 
+console.log(5 > 3);   // true
+console.log(5 < 3);   // false
+console.log(5 >= 5);  // true
+console.log(5 <= 4);  // false
+
+
+🟡 2️⃣ String vs Number
+Rule:
+👉 JS string ko number me convert karta hai (agar possible ho)
+Example 
+console.log("5" > 3);   // true  (5 > 3)
+console.log("5" < 10);  // true  (5 < 10)
+console.log("10" > 5);  // true
+
+Agar string number jaisi nahi ho:
+console.log("abc" > 5); // false (NaN > 5 → false)// important
+
+
+🔴 4️⃣ == vs === (Most Important)
+
+
+== (Loose Equality)
+
+👉 Value check karta hai
+👉 Type ignore karta hai
+
+console.log(5 == "5");   // true
+console.log(true == 1);  // true
+
+=== (Strict Equality)
+
+👉 Value + Type dono check karta hai
+
+console.log(5 === "5");  // false
+console.log(true === 1); // false
+
+
+
+🟠 5️⃣ Not Equal
+checks if 2 value are not equeal 
+console.log(5 != 3);     // true
+console.log(5 != "5");   // false (type ignore)
+console.log(5 != 5);          // false   (same value)
+console.log(5 != "5");        // false   ("5" ko 5 bana diya → same)
+console.log(5 != 6);          // true    (alag value)
+console.log(0 != false);      // false   (false ko 0 bana diya)
+console.log("" != 0);         // false   (empty string ko 0 bana diya)
+console.log(null != undefined); // false (JS mein null aur undefined loose mein equal maante hain)
+
+
+
+
+
+
+🟤 6️⃣ Strict Not Equal
+🔴 !== (Strict Not Equal)
+
+👉 Value + Type dono check karta hai
+👉 Type convert nahi karta
+
+Example:
+console.log(5 !== "5");  // true
+
+
+Kyuki:
+
+Value same
+
+Type different
+console.log(5 !== "5");  // true
+
+🎯 Super Important Rules
+
+> < me string number ban sakti hai
+
+Dono string ho to dictionary compare
+
+== dangerous hai
+
+=== safe hai
+
+🔥 Final Quick Example (Mixed)
+console.log("10" > 2);    // true
+console.log("2" > "10");  // true
+console.log(2 > "10");    // false
+console.log(5 == "5");    // true
+console.log(5 === "5");   // false
+
+
+Ab tu strong ho raha hai 💪
+
+Ab bata — next kare Logical Operators (&& || !) ya pehle aur practice kare? 😎
+
 
 
