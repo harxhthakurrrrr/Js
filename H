@@ -597,4 +597,428 @@ Ab tu strong ho raha hai 💪
 Ab bata — next kare Logical Operators (&& || !) ya pehle aur practice kare? 😎
 
 
+Logical Operators :-
+
+
+Logical Opeerations Dono Condication ke bae par use hote hai Yeh Tue False value Check karte Hai 
+Yeh Sab Se Jada Hamre If Else ki condication par use hote hai aur if-else, while, conditions mein sabse zyada kaam aate hain
+
+
+
+yeh 3 type ke hote hai 
+And (&&)
+OR(||}
+Not(!)
+
+(tum bol bol rahe ho ki agar dono me se ek vbe condtination True hue To and me tabhi vo chalege barna nahi chalege agar ej ve false hue to usme and or OR me aise hota hai agar ek be true to cal jaayega agar barna ek be true nahi to nahi chalega or not hamra yeh arta hai agar uske ulta kar deta agar true hue to false or false hui to true )
+
+1 And(&&)-
+Agar Dono Condtication True Hogi  
+| A | B | Result |
+| - | - | ------ |
+| T | T | T      |
+| T | F | F      |
+| F | T | F      |
+| F | F | F      |
+
+Examplee :-
+let age = 20;
+let hasMoney = true;
+
+// Dono true → chalega
+if (age >= 18 && hasMoney) {
+  console.log("Movie dekhne ja sakta hai");   // yeh print hoga
+}
+
+let hasTicket = false;
+
+// Ek false → nahi chalega
+if (age >= 18 && hasTicket) {
+  console.log("Andar ja sakta hai");          // yeh print NAHI hoga
+}
+ 
+
+2-Or(||):-
+
+agar Yeh ek condtination True Hu to chal jaayega yeh 
+
+
+
+example :-
+let isAdmin = false;
+let isManager = true;
+
+if (isAdmin || isManager) {
+  console.log("Access Granted");
+}
+
+| A | B | Result |
+| - | - | ------ |
+| T | T | T      |
+| T | F | T      |
+| F | T | T      |
+| F | F | F      |
+
+
+
+
+3 - NOt (!)
+Value ko ulta kar deta hai
+
+true → false
+
+false → true
+Value ko ulta kar deta hai
+
+true → false
+
+false → true
+console.log(!true);   // false
+console.log(!false);  // true
+let isLoggedIn = false;
+
+if (!isLoggedIn) {
+  console.log("Please Login");
+}
+
+
+
+2-example 
+let a = 5;
+console.log(!a);
+Ouput :-False bcz kyoki % tur value hote hai agar yha 0 hota to True deta Agar kyoki BAs 0 hi hamre true Value hote ai 
+
+
+
+4. Assignment Operators
+Value assign karne ke liye use hote hain.
+Example  :
+let a = 10;
+
+a += 5;  // a = a + 5 → 15
+a -= 3;  // a = a - 3 → 12
+a *= 2;  // a = a * 2 → 24
+a /= 4;  // a = a / 4 → 6
+a %= 5;  // remainder → 1
+
+
+5.Ternary Operator
+Short Form of If-else Condication 
+
+
+
+let age = 18;
+
+let result = age >= 18 ? "Adult" : "Minor";
+console.log(result);
+
+
+
+
+//////////////////////////////////////////
+Condition:
+
+
+Jab program ko decision lena ho
+True ya False ke base pe kaam karna ho
+Yeh JS mein sabse important cheez hai kyunki yeh decide karta hai ki code ka kaunsa part chalega ya nahi.
+Conditionals = "Agar yeh sahi hai toh yeh karo, warna woh karo"
+
+Start :-
+
+1. if Statement (Sabse Basic)
+Example :-
+let age = 20;
+
+if (age >= 18) {
+  console.log("Adult");
+}
+👉 Agar condition true → code chalega
+👉 Agar false → skip ho jayega
+
+
+2. if-else (Dono taraf handle karo)
+Agar condition true → ek kaam
+False → dusra kaam
+Example :
+
+let marks = 35;
+
+if (marks >= 40) {
+  console.log("Pass ho gaya! 🎉");
+} else {
+  console.log("Fail ho gaya 😔, padhai karo");
+}
+
+
+
+3-else-if(Aur check karo)👉
+ Jab multiple conditions check karni ho
+👉 Aur sirf ek hi block execute karna ho
+
+
+Example :-
+let marks = 75;
+
+if (marks >= 90) {
+  console.log("Grade A");
+} 
+else if (marks >= 75) {
+  console.log("Grade B");
+} 
+else {
+  console.log("Fail");
+}
+
+
+
+4-Switch Statement 
+Soch le:
+Tu ek remote control leke TV pe channel badal raha hai.
+Tu bas ek button dabata hai → aur TV jaanta hai ki button 1 dabaya toh Star Plus, 2 dabaya toh Sony, 3 dabaya toh Zee...
+Yeh switch case bilkul waisa hi hai – ek value pe multiple exact matches check karta hai.
+example :-
+let day = 2;
+switch(day){
+    case 1: 
+    console.log("monday")
+    break;
+    case 2 : 
+     console.log("Tues")
+     break;
+     default:
+     console.log("sunday")
+}
+
+🧠 Kab use kare?
+
+Agar aisa ho:
+
+if (day === 1) { }
+else if (day === 2) { }
+else if (day === 3) { }
+
+
+To uski jagah switch likh sakte ho.
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Loop in Js:- Iska Dusra Naam (iterations) Be Hota Hai  
+kissse Kaam Ko Baar Print Karna ! se Jada BAar Print Karne ke hamko loop  Ki jArut pAdte Hai  Loop Ka use kArte Karte Hai Loop main 3 Type ke hote hai Pa 2 Main Hote HAi (for Loop , While loop, do While Loop, For in Loop Ans For In loop ) 🧨
+
+Soch:
+
+1 se 100 tak numbers print karne hain
+Table banana hai (5 × 1 = 5, 5 × 2 = 10...)
+Array ke har item pe kuch karna hai
+Koi game mein turns chalane hain
+
+In sabko bina loops ke baar-baar likhna padega – boring aur galti hone ka chance zyada.
+Loop = "jab tak yeh condition sahi hai, yeh code repeat karo
+
+
+
+For Loop In Js :- Kisbe Kaam Kar Baar Repet Karne ke Jab HAmko Pata hai Is Loop Kab Or KAb TAk Chalana hai Tab Ham For Loop Ka Use Karte Hai 
+
+
+Example :
+let arr = [10, 20, 30];
+
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
+}
+
+break
+
+👉 Loop ko turant band kar deta hai
+
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) {
+    break;
+  }
+  console.log(i);
+}
+out
+1
+2
+continue
+
+👉 Current round skip karta hai
+👉 Loop band nahi hota
+for (let i = 1; i <= 5; i++) {
+  if (i === 3) {
+    continue;
+  }
+  console.log(i);
+}
+1
+2
+4
+5
+🟢 While Loop kya hota hai?
+
+👉 Jab tak condition true hai
+👉 Tab tak loop chalta rahega
+
+example :-
+let i = 1;
+
+while (i <= 5) {
+  console.log(i);
+  i++;
+}
+
+
+🟢 do...while kya hota hai?
+
+👉 Pehle code chalega
+👉 Fir condition check hogi
+Example 
+let i = 1;
+
+while (i <= 3) {
+  console.log(i);
+  i++;
+}
+
+
+
+
+
+
+for...of Loop:-
+Kya karta hai?
+
+Value deta hai (direct data)
+
+👉 Kaha use hota hai?
+
+Array
+
+String
+
+Map, Set (advanced)
+
+👉 Kab use kare?
+
+Jab hume sirf values chahiye, index nahi
+Example (Array):-
+
+let arr = [10, 20, 30];
+
+for (let value of arr) {
+  console.log(value);
+
+
+}
+Output:-
+10
+20
+30
+
+Example (String)
+
+
+
+let name = "Harsh";
+
+for (const char of name) {
+  console.log(char);
+}
+// Output:
+// H
+// a
+// r
+// s
+// h
+
+
+Real use cases (kab use karte hain):
+
+Array ke har element pe kuch karna ho (print, sum, check)
+String ke har character pe loop chalana (password check, reverse string)
+Modern code mein normal for (let i=0; ...) ki jagah yeh zyada clean lagta hai jab index nahi chahiye
+
+
+
+for in Loop :-
+for...in → keys / property names pe iterate karta hai
+Yeh mainly plain objects ({}) ke liye banaya gaya hai.
+Kya karta hai?
+
+Key / Index deta hai
+
+👉 Kaha use hota hai?
+
+Mostly Object ke liye
+
+Array me bhi use hota hai (par recommended nahi)
+
+👉 Kab use kare?
+
+Jab object ke keys chahiye
+
+
+Example (Object):-
+let user = {
+  name: "Harshu",
+  age: 22
+};
+
+for (let key in user) {
+  console.log(key);        // name, age
+  console.log(user[key]);  // Harshu, 22
+}
+
+| for…of            | for…in       |
+| ----------------- | ------------ |
+| Value deta hai    | Key deta hai |
+| Array / String    | Object       |
+| Modern array loop | Object loop  |
+
+Real use cases (kab use karte hain):
+
+Object ke saare properties ko loop karna ho (print, copy, check)
+JSON data process karna
+Object ke keys/values ko array mein convert karna
+
+
+👉 Value chahiye → for…of
+👉 Key chahiye → for…in
+
+
+
+
+🟢 1️⃣ for…of
+👉 Value deta hai
+👉 Array / String ke liye use hota hai
+
+
+Example (Array):-
+let arr = [10, 20, 30];
+
+for (let value of arr) {
+  console.log(value);
+}
+Example(string):-
+let name = "Harshu";
+
+for (let char of name) {
+  console.log(char);
+}
+Output:-
+H
+a
+r
+s
+h
+u
+
+////////////////////////////////////////////////////////////////
+
+
+
+
+
 
