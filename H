@@ -1,4 +1,4 @@
-1-Variable In Js :- variable EK Container Hota Hai jisme Ham Apna Data Store Karte Hai  
+1-Variable In Js :- variable EK Container Hota Hai jisme Ham Apna Data Store Karte Hai
 Variable Jo Hote Hai vo 3 Type Ke Hote hai
 
 1-Var - . Var ek Purana Variable Hai Purana Variable Isliye Tha kyoki Variable Me Ham Jab Be kuch Defiend karte The Vo koi Error Throght Nahi karta hai OR yeh Bhoot Risky Hota Hai  For Example :-
@@ -386,11 +386,11 @@ console.log(typeof console.log); // "function"
 
 
 Type Conversion And Operation :-
-Ek Data Type ko Dusre Data Type me me convert karna Yeh TYpe Conversion 
+Ek Data Type ko Dusre Data Type me me convert karna Yeh TYpe Conversion
 type conversion 2 type ke hote hai
 
- 
-implicit conversion(Automatic,Type Coercion (Implicit)):-  
+ 
+implicit conversion(Automatic,Type Coercion (Implicit)):-
 Jisme javascript covert karte hai
 let a = "5";
 let b = 2;
@@ -456,18 +456,18 @@ Example :-
 let a = 10;
 let b = 3;
 
-console.log(a + b);   // 13//addtination 
+console.log(a + b);   // 13//addtination
 console.log(a - b);   // 7// subtraction
 console.log(a * b);   // 30 multiplication
 console.log(a / b);   // 3.333...//Division
 console.log(a % b);   // 1 (shesh) Modulus (%)
 console.log(a ** 2);  // 100 (10 ki power 2)
 let a = 5;
-a++;///////////INcremenet 
+a++;///////////INcremenet
 console.log(a); // 6
 
 let a = 5;
-a--;           /// Decrement 
+a--;           /// Decrement
 console.log(a); // 6
 
 
@@ -491,7 +491,7 @@ Comparison Operators List:-
 
 👉 NaN = Not a Number
 Matlab result number hona chahiye tha
-mtlab value Number hone chiayte the vo no=umber anhi ho  paaye 
+mtlab value Number hone chiayte the vo no=umber anhi ho  paaye
 
 
 
@@ -502,7 +502,7 @@ mtlab value Number hone chiayte the vo no=umber anhi ho  paaye
 
 
 🔵 1️⃣ Number vs Number
-Example 
+Example
 console.log(5 > 3);   // true
 console.log(5 < 3);   // false
 console.log(5 >= 5);  // true
@@ -512,7 +512,7 @@ console.log(5 <= 4);  // false
 🟡 2️⃣ String vs Number
 Rule:
 👉 JS string ko number me convert karta hai (agar possible ho)
-Example 
+Example
 console.log("5" > 3);   // true  (5 > 3)
 console.log("5" < 10);  // true  (5 < 10)
 console.log("10" > 5);  // true
@@ -542,7 +542,7 @@ console.log(true === 1); // false
 
 
 🟠 5️⃣ Not Equal
-checks if 2 value are not equeal 
+checks if 2 value are not equeal
 console.log(5 != 3);     // true
 console.log(5 != "5");   // false (type ignore)
 console.log(5 != 5);          // false   (same value)
@@ -600,12 +600,12 @@ Ab bata — next kare Logical Operators (&& || !) ya pehle aur practice kare? �
 Logical Operators :-
 
 
-Logical Opeerations Dono Condication ke bae par use hote hai Yeh Tue False value Check karte Hai 
+Logical Opeerations Dono Condication ke bae par use hote hai Yeh Tue False value Check karte Hai
 Yeh Sab Se Jada Hamre If Else ki condication par use hote hai aur if-else, while, conditions mein sabse zyada kaam aate hain
 
 
 
-yeh 3 type ke hote hai 
+yeh 3 type ke hote hai
 And (&&)
 OR(||}
 Not(!)
@@ -613,7 +613,7 @@ Not(!)
 (tum bol bol rahe ho ki agar dono me se ek vbe condtination True hue To and me tabhi vo chalege barna nahi chalege agar ej ve false hue to usme and or OR me aise hota hai agar ek be true to cal jaayega agar barna ek be true nahi to nahi chalega or not hamra yeh arta hai agar uske ulta kar deta agar true hue to false or false hui to true )
 
 1 And(&&)-
-Agar Dono Condtication True Hogi  
+Agar Dono Condtication True Hogi
 | A | B | Result |
 | - | - | ------ |
 | T | T | T      |
@@ -627,20 +627,20 @@ let hasMoney = true;
 
 // Dono true → chalega
 if (age >= 18 && hasMoney) {
-  console.log("Movie dekhne ja sakta hai");   // yeh print hoga
+  console.log("Movie dekhne ja sakta hai");   // yeh print hoga
 }
 
 let hasTicket = false;
 
 // Ek false → nahi chalega
 if (age >= 18 && hasTicket) {
-  console.log("Andar ja sakta hai");          // yeh print NAHI hoga
+  console.log("Andar ja sakta hai");          // yeh print NAHI hoga
 }
- 
+ 
 
 2-Or(||):-
 
-agar Yeh ek condtination True Hu to chal jaayega yeh 
+agar Yeh ek condtination True Hu to chal jaayega yeh
 
 
 
@@ -649,7 +649,7 @@ let isAdmin = false;
 let isManager = true;
 
 if (isAdmin || isManager) {
-  console.log("Access Granted");
+  console.log("Access Granted");
 }
 
 | A | B | Result |
@@ -678,15 +678,15 @@ console.log(!false);  // true
 let isLoggedIn = false;
 
 if (!isLoggedIn) {
-  console.log("Please Login");
+  console.log("Please Login");
 }
 
 
 
-2-example 
+2-example
 let a = 5;
 console.log(!a);
-Ouput :-False bcz kyoki % tur value hote hai agar yha 0 hota to True deta Agar kyoki BAs 0 hi hamre true Value hote ai 
+Ouput :-False bcz kyoki % tur value hote hai agar yha 0 hota to True deta Agar kyoki BAs 0 hi hamre true Value hote ai
 
 
 
@@ -703,7 +703,7 @@ a %= 5;  // remainder → 1
 
 
 5.Ternary Operator
-Short Form of If-else Condication 
+Short Form of If-else Condication
 
 
 
@@ -731,7 +731,7 @@ Example :-
 let age = 20;
 
 if (age >= 18) {
-  console.log("Adult");
+  console.log("Adult");
 }
 👉 Agar condition true → code chalega
 👉 Agar false → skip ho jayega
@@ -745,15 +745,15 @@ Example :
 let marks = 35;
 
 if (marks >= 40) {
-  console.log("Pass ho gaya! 🎉");
+  console.log("Pass ho gaya! 🎉");
 } else {
-  console.log("Fail ho gaya 😔, padhai karo");
+  console.log("Fail ho gaya 😔, padhai karo");
 }
 
 
 
 3-else-if(Aur check karo)👉
- Jab multiple conditions check karni ho
+ Jab multiple conditions check karni ho
 👉 Aur sirf ek hi block execute karna ho
 
 
@@ -761,18 +761,18 @@ Example :-
 let marks = 75;
 
 if (marks >= 90) {
-  console.log("Grade A");
-} 
+  console.log("Grade A");
+}
 else if (marks >= 75) {
-  console.log("Grade B");
-} 
+  console.log("Grade B");
+}
 else {
-  console.log("Fail");
+  console.log("Fail");
 }
 
 
 
-4-Switch Statement 
+4-Switch Statement
 Soch le:
 Tu ek remote control leke TV pe channel badal raha hai.
 Tu bas ek button dabata hai → aur TV jaanta hai ki button 1 dabaya toh Star Plus, 2 dabaya toh Sony, 3 dabaya toh Zee...
@@ -780,14 +780,14 @@ Yeh switch case bilkul waisa hi hai – ek value pe multiple exact matches check
 example :-
 let day = 2;
 switch(day){
-    case 1: 
-    console.log("monday")
-    break;
-    case 2 : 
-     console.log("Tues")
-     break;
-     default:
-     console.log("sunday")
+    case 1:
+    console.log("monday")
+    break;
+    case 2 :
+     console.log("Tues")
+     break;
+     default:
+     console.log("sunday")
 }
 
 🧠 Kab use kare?
@@ -804,7 +804,7 @@ To uski jagah switch likh sakte ho.
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Loop in Js:- Iska Dusra Naam (iterations) Be Hota Hai  
+Loop in Js:- Iska Dusra Naam (iterations) Be Hota Hai
 kissse Kaam Ko Baar Print Karna ! se Jada BAar Print Karne ke hamko loop  Ki jArut pAdte Hai  Loop Ka use kArte Karte Hai Loop main 3 Type ke hote hai Pa 2 Main Hote HAi (for Loop , While loop, do While Loop, For in Loop Ans For In loop ) 🧨
 
 Soch:
@@ -819,14 +819,14 @@ Loop = "jab tak yeh condition sahi hai, yeh code repeat karo
 
 
 
-For Loop In Js :- Kisbe Kaam Kar Baar Repet Karne ke Jab HAmko Pata hai Is Loop Kab Or KAb TAk Chalana hai Tab Ham For Loop Ka Use Karte Hai 
+For Loop In Js :- Kisbe Kaam Kar Baar Repet Karne ke Jab HAmko Pata hai Is Loop Kab Or KAb TAk Chalana hai Tab Ham For Loop Ka Use Karte Hai
 
 
 Example :
 let arr = [10, 20, 30];
 
 for (let i = 0; i < arr.length; i++) {
-  console.log(arr[i]);
+  console.log(arr[i]);
 }
 
 break
@@ -834,10 +834,10 @@ break
 👉 Loop ko turant band kar deta hai
 
 for (let i = 1; i <= 5; i++) {
-  if (i === 3) {
-    break;
-  }
-  console.log(i);
+  if (i === 3) {
+    break;
+  }
+  console.log(i);
 }
 out
 1
@@ -847,10 +847,10 @@ continue
 👉 Current round skip karta hai
 👉 Loop band nahi hota
 for (let i = 1; i <= 5; i++) {
-  if (i === 3) {
-    continue;
-  }
-  console.log(i);
+  if (i === 3) {
+    continue;
+  }
+  console.log(i);
 }
 1
 2
@@ -865,8 +865,8 @@ example :-
 let i = 1;
 
 while (i <= 5) {
-  console.log(i);
-  i++;
+  console.log(i);
+  i++;
 }
 
 
@@ -874,12 +874,12 @@ while (i <= 5) {
 
 👉 Pehle code chalega
 👉 Fir condition check hogi
-Example 
+Example
 let i = 1;
 
 while (i <= 3) {
-  console.log(i);
-  i++;
+  console.log(i);
+  i++;
 }
 
 
@@ -908,7 +908,7 @@ Example (Array):-
 let arr = [10, 20, 30];
 
 for (let value of arr) {
-  console.log(value);
+  console.log(value);
 
 
 }
@@ -924,7 +924,7 @@ Example (String)
 let name = "Harsh";
 
 for (const char of name) {
-  console.log(char);
+  console.log(char);
 }
 // Output:
 // H
@@ -962,13 +962,13 @@ Jab object ke keys chahiye
 
 Example (Object):-
 let user = {
-  name: "Harshu",
-  age: 22
+  name: "Harshu",
+  age: 22
 };
 
 for (let key in user) {
-  console.log(key);        // name, age
-  console.log(user[key]);  // Harshu, 22
+  console.log(key);        // name, age
+  console.log(user[key]);  // Harshu, 22
 }
 
 | for…of            | for…in       |
@@ -999,13 +999,13 @@ Example (Array):-
 let arr = [10, 20, 30];
 
 for (let value of arr) {
-  console.log(value);
+  console.log(value);
 }
 Example(string):-
 let name = "Harshu";
 
 for (let char of name) {
-  console.log(char);
+  console.log(char);
 }
 Output:-
 H
@@ -1017,8 +1017,369 @@ u
 
 ////////////////////////////////////////////////////////////////
 
+Array:-
+Array kya hota hai?
+Array ek Container Hota Hai Mtlab Store Ki tarha ota Hia Jisme Ham List Of multiple Value Store Kar sKAhte Hai 
+list of Value Store Karta Hai 
+Har item ko index se access karte hain (0 se shuru hota hai)
+
+Array ke andar kuch bhi daal sakte ho: number, string, boolean, object, dusra array bhi
+
+isko Ham Squre Breacket([]) Me Bante HAI or Uske Andar Hi Ham Value Store KArte Hai []
+
+
+Array Kaise Banate Hain?
+
+
+// Tareeka 1: Literal way (sabse common)
+let colors = ["Red", "Green", "Blue", "Yellow"];
+
+// Tareeka 2: Empty array (baad mein add kar sakte ho)
+let numbers = [];
+
+// Tareeka 3: new Array() (kam use karte hain)
+let mixed = new Array(1, "Harsh", true, 3.14);
+
+Array Ke Items Ko Access Kaise Karte Hain? (Index)
+ndex 0 se shuru hota hai (pehla item = 0)
+
+
+let fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+console.log(fruits[0]);    // Apple
+console.log(fruits[2]);    // Mango
+console.log(fruits[fruits.length - 1]);   // Orange (last item)
+
+fruits[1] = "Kiwi";        // Change kar sakte ho
+console.log(fruits);       // ["Apple", "Kiwi", "Mango", "Orange"]
+
+
+Array Method :-
+
+
+1-Push ();- array me last me koi element ko add karne ke liye 
+
+let arr = [1,2,3];
+arr.push(4);
+console.log(arr);
+
+
+2- pop():array ke last me koi element ko delect karne ke liye ham pop ka use kar sakhte hai 
+let arr =[1,2,3,4]
+arr.pop()
+console.log(arr)
+
+
+3:- unshift()
+array ke shurur me koi element ko add karne ke liye use hote hai 
+let arr = [1,2,3];
+arr.unshift(4);
+console.log(arr);
+
+4:- shift ()
+array ke shuru me koi elemenet ko remove karne ke liye  
+let arr = [1,2,3];
+arr.push();
+console.log(arr);
+
+5:-indexOf()
+Array Ke Element ki Value Ka Index No Nikalne ke liye hota hai 
+let arr = [1,2,3,4]
+console.log(arr.indexOf(3));
+
+6-Include()
+Check karta hai value present hai ya nahi
+let arr = [1,2,3,4]
+console.log(arr.includes(30));            yeh True Yha False m deta hai Value
+
+
+
+7- map();-
+Har item pe function chalata hai, naya array banata 
+array ka looping method hai yha array ka method har elelemt pe kaam karta hai oe naya array return karta karta hai original array me kuch chnage nahi karta hai ,
+Ye ek High Order Function (HOF) hai
+Or Yeh CallBack dunction Be Hote Hai 
+let arr = [1,2,3,4]
+let newArr = arr.map((num)=>{
+    return num*2;
+    
+});
+console.log(newArr);
+
+
+8- foreach():-
+👉 Array ka method
+👉 High Order Function hai
+👉 Callback function leta hai
+👉 Return kuch nahi karta 
+Or yeh Orginal Array Me Change karta hai
+let arr = [1,2,3,4]
+arr.forEach((num)=>{
+console.log(num)
+});
+
+
+9-filter()
+👉 Array ka looping method
+👉 Condition check karta hai
+👉 Naya array return karta hai
+👉 Sirf un elements ko rakhta hai jo condition true kare
+yeh condition ke base par filterkarta hai kisse array ko or ek New Array Return Karta Hai
+example :-
+
+let arr = [1,2,3,4,5,6];
+
+let even = arr.filter(num => num % 2 === 0);
+
+console.log(even);
+
+
+
+10:-Reduce ()
+Array Ke Sab Element KO mila Kar Ek Unki SIngle value 
+Deta Hai  yeh New array Return karta hai 
+example-
+let arr = [10,20,30]
+let total = arr.reduce((accumulator, current)=>{
+return acc+num;
+},0);
+ console.log(total)
+
+11- Find();
+Find Method Filter ki taraf hi kaam karta hai isme be condition ke bas par filter hota hai par ind kya karta jaiseusko value mile usse aage check anhi karta hai bas ek single value de ar retunr kar deta hai par filter pure object ko filter karta hai or filed karne array me uski muplitple valyue true kat=r jo condtinationse match hogi
+example:-
+let arr = [2, 4, 6, 8];
+
+let result = arr.find(num => num > 4);
+
+console.log(result);
+👉 Output: 6 ✅
+
+Kyun?
+
+2 > 4 ❌
+
+4 > 4 ❌
+
+6 > 4 ✅ → Pehla match mil gaya → return 6
+
+8 check hi nahi hoga (kyunki find pehla match pe ruk jata hai) 
+
+
+
+12-Some():-Find ke Taraf hai condtinaction Ckeck karta hai Jaha Isko Condtination True mile Whaha jaake yeh Value Ture yha False De ga Par Filetr me hai yeh hai single value return karta hai bas 
+🟢 some() kya karta hai?
+
+👉 Array me check karta hai
+👉 Agar ek bhi element condition true kare
+👉 To turant true return karta hai
+👉 Nahi to false
+
+⚠️ Boolean return karta hai (true/false)
+example:-
+let arr = [1, 3, 5, 8, 10];
+
+let result = arr.some(num => num % 2 === 0);
+
+console.log(result);
+Step by step:
+
+1 → odd ❌
+
+3 → odd ❌
+
+5 → odd ❌
+
+8 → even ✅
+
+👉 8 pe true mil gaya
+👉 Loop yahi stop
+👉 10 check hi nahi karega
 
 
 
 
+
+13-Every():-
+every() pure array me check karta hai, aur jaha false mil gaya waha false return kar deta hai?
+👉 Haan ✅
+Bas ek important point add kar deta hoon:
+
+👉 Pure array me tab tak check karega jab tak false na mil jaye
+👉 Jaha pehla false milta hai, wahi ruk jata hai ❌
+
+Example:-
+let arr = [2, 4, 6, 9, 10];
+
+let result = arr.every(num => num % 2 === 0);
+
+console.log(result);
+
+
+Flow:
+
+2 ✅
+
+4 ✅
+
+6 ✅
+
+9 ❌ → Stop
+
+👉 10 check hi nahi karega
+👉 Direct false return
+
+
+
+14-IsArray(:-
+Yeh Check Karta Hai o Hamko Value Mil Arahe Hai Vo array me yha nahi Or Boolena Value Return Karta Hai
+example:-
+console.log(Array.isArray([1,2])); // true
+console.log(Array.isArray("Hi"));  // false
+
+
+15-Join()
+Hamre array ki String me Covert Karne ke liye Hote Hai 
+let arr = ["A", "B", "C"];
+
+console.log(arr.join(""));
+Output:
+"A,B,C"  
+let arr = ["A", "B", "C"];
+
+console.log(arr.join("-"));
+                                            (Defalur cooma Miltrat hai )
+
+16-ToString():- 
+Jaise Join Karta Kar Baise eh Krta ahi Join Uske Arg Mem= luch Be de Sakahte hIa Tostring me NAhi de Sakhte 
+
+
+let arr = ["A", "B", "C"];
+
+console.log(arr.toString(""));
+
+17- sort()
+
+👉 Array ko sort karta hai
+
+
+let arr = [5, 2, 8];
+
+arr.sort();
+console.log(arr);
+Output:-
+[ 2, 5, 8 ]
+
+
+
+
+
+18-concat()
+
+concat()
+Do array ko jodta hai
+let a = [1,2];
+let b = [3,4];
+
+let result = a.concat(b);
+console.log(result);
+
+19-reverse()
+
+👉 Array ko ulta kar deta hai
+
+let arr = [1,2,3];
+
+arr.reverse();
+console.log(arr);
+
+
+Output:
+
+[3,2,1]
+
+
+
+
+20-slice()
+
+👉 Array ka portion copy karta hai
+👉 Original change nahi karta
+
+Example:-
+let arr = [1,2,3,4];
+
+console.log(arr.slice(1,3));
+Output:
+
+
+
+[2,3]
+
+21 splice():-
+
+Array me se remove / add karta hai
+👉 Original array change karta hai
+
+let arr = [1,2,3,4];
+
+arr.splice(1,2);//chalan khaha se or remove kart hia
+
+console.log(arr);
+
+
+Output:
+
+[1,4]
+22- entries()
+
+👉 Index + value ka iterator deta hai
+
+let arr = ["A","B"];
+
+for (let [index, value] of arr.entries()) {
+  console.log(index, value);
+}
+
+
+
+
+🟡 Add karna hai to kya use karenge?
+
+👉 splice()
+
+🟢 splice() se add karna
+
+Syntax:
+
+array.splice(startIndex, deleteCount, itemToAdd)
+
+Example — Add at index 1
+let arr = [1,2,3,4];
+
+arr.splice(1, 0, 99);
+
+console.log(arr);
+
+
+Output:
+
+[1, 99, 2, 3, 4]
+
+
+👉 1 = index
+👉 0 = kuch delete nahi
+👉 99 = add
+
+🟢 Remove + Add
+let arr = [1,2,3,4];
+
+arr.splice(1, 2, 50);
+
+console.log(arr);
+
+
+Output:
+
+[1, 50, 4]
 
