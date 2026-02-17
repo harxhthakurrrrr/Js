@@ -1019,8 +1019,8 @@ u
 
 Array:-
 Array kya hota hai?
-Array ek Container Hota Hai Mtlab Store Ki tarha ota Hia Jisme Ham List Of multiple Value Store Kar sKAhte Hai 
-list of Value Store Karta Hai 
+Array ek Container Hota Hai Mtlab Store Ki tarha ota Hia Jisme Ham List Of multiple Value Store Kar sKAhte Hai
+list of Value Store Karta Hai
 Har item ko index se access karte hain (0 se shuru hota hai)
 
 Array ke andar kuch bhi daal sakte ho: number, string, boolean, object, dusra array bhi
@@ -1057,33 +1057,33 @@ console.log(fruits);       // ["Apple", "Kiwi", "Mango", "Orange"]
 Array Method :-
 
 
-1-Push ();- array me last me koi element ko add karne ke liye 
+1-Push ();- array me last me koi element ko add karne ke liye
 
 let arr = [1,2,3];
 arr.push(4);
 console.log(arr);
 
 
-2- pop():array ke last me koi element ko delect karne ke liye ham pop ka use kar sakhte hai 
+2- pop():array ke last me koi element ko delect karne ke liye ham pop ka use kar sakhte hai
 let arr =[1,2,3,4]
 arr.pop()
 console.log(arr)
 
 
 3:- unshift()
-array ke shurur me koi element ko add karne ke liye use hote hai 
+array ke shurur me koi element ko add karne ke liye use hote hai
 let arr = [1,2,3];
 arr.unshift(4);
 console.log(arr);
 
 4:- shift ()
-array ke shuru me koi elemenet ko remove karne ke liye  
+array ke shuru me koi elemenet ko remove karne ke liye
 let arr = [1,2,3];
 arr.push();
 console.log(arr);
 
 5:-indexOf()
-Array Ke Element ki Value Ka Index No Nikalne ke liye hota hai 
+Array Ke Element ki Value Ka Index No Nikalne ke liye hota hai
 let arr = [1,2,3,4]
 console.log(arr.indexOf(3));
 
@@ -1095,14 +1095,14 @@ console.log(arr.includes(30));            yeh True Yha False m deta hai Value
 
 
 7- map();-
-Har item pe function chalata hai, naya array banata 
+Har item pe function chalata hai, naya array banata
 array ka looping method hai yha array ka method har elelemt pe kaam karta hai oe naya array return karta karta hai original array me kuch chnage nahi karta hai ,
 Ye ek High Order Function (HOF) hai
-Or Yeh CallBack dunction Be Hote Hai 
+Or Yeh CallBack dunction Be Hote Hai
 let arr = [1,2,3,4]
 let newArr = arr.map((num)=>{
-    return num*2;
-    
+    return num*2;
+ 
 });
 console.log(newArr);
 
@@ -1111,7 +1111,7 @@ console.log(newArr);
 👉 Array ka method
 👉 High Order Function hai
 👉 Callback function leta hai
-👉 Return kuch nahi karta 
+👉 Return kuch nahi karta
 Or yeh Orginal Array Me Change karta hai
 let arr = [1,2,3,4]
 arr.forEach((num)=>{
@@ -1136,14 +1136,14 @@ console.log(even);
 
 
 10:-Reduce ()
-Array Ke Sab Element KO mila Kar Ek Unki SIngle value 
-Deta Hai  yeh New array Return karta hai 
+Array Ke Sab Element KO mila Kar Ek Unki SIngle value
+Deta Hai  yeh New array Return karta hai
 example-
 let arr = [10,20,30]
 let total = arr.reduce((accumulator, current)=>{
 return acc+num;
 },0);
- console.log(total)
+ console.log(total)
 
 11- Find();
 Find Method Filter ki taraf hi kaam karta hai isme be condition ke bas par filter hota hai par ind kya karta jaiseusko value mile usse aage check anhi karta hai bas ek single value de ar retunr kar deta hai par filter pure object ko filter karta hai or filed karne array me uski muplitple valyue true kat=r jo condtinationse match hogi
@@ -1163,11 +1163,11 @@ Kyun?
 
 6 > 4 ✅ → Pehla match mil gaya → return 6
 
-8 check hi nahi hoga (kyunki find pehla match pe ruk jata hai) 
+8 check hi nahi hoga (kyunki find pehla match pe ruk jata hai)
 
 
 
-12-Some():-Find ke Taraf hai condtinaction Ckeck karta hai Jaha Isko Condtination True mile Whaha jaake yeh Value Ture yha False De ga Par Filetr me hai yeh hai single value return karta hai bas 
+12-Some():-Find ke Taraf hai condtinaction Ckeck karta hai Jaha Isko Condtination True mile Whaha jaake yeh Value Ture yha False De ga Par Filetr me hai yeh hai single value return karta hai bas
 🟢 some() kya karta hai?
 
 👉 Array me check karta hai
@@ -1239,19 +1239,19 @@ console.log(Array.isArray("Hi"));  // false
 
 
 15-Join()
-Hamre array ki String me Covert Karne ke liye Hote Hai 
+Hamre array ki String me Covert Karne ke liye Hote Hai
 let arr = ["A", "B", "C"];
 
 console.log(arr.join(""));
 Output:
-"A,B,C"  
+"A,B,C"
 let arr = ["A", "B", "C"];
 
 console.log(arr.join("-"));
-                                            (Defalur cooma Miltrat hai )
+                                            (Defalur cooma Miltrat hai )
 
-16-ToString():- 
-Jaise Join Karta Kar Baise eh Krta ahi Join Uske Arg Mem= luch Be de Sakahte hIa Tostring me NAhi de Sakhte 
+16-ToString():-
+Jaise Join Karta Kar Baise eh Krta ahi Join Uske Arg Mem= luch Be de Sakahte hIa Tostring me NAhi de Sakhte
 
 
 let arr = ["A", "B", "C"];
@@ -1338,7 +1338,7 @@ Output:
 let arr = ["A","B"];
 
 for (let [index, value] of arr.entries()) {
-  console.log(index, value);
+  console.log(index, value);
 }
 
 
@@ -1383,3 +1383,261 @@ Output:
 
 [1, 50, 4]
 
+
+////////////////////////////////////////////////////////////////////////////////////////////
+Object :-
+ek container jisme tum named properties (key-value pairs) store kar sakte ho
+Soch le:
+Ek person ka data – naam, umar, city, hobby sab ek jagah rakhna ho toh object perfect hai.
+For Example :-
+let person = {
+  name: "Harsh",
+  age: 20,
+  city: "Delhi",
+  isStudent: true,
+  hobbies: ["Coding", "Cricket", "Music"]
+};
+
+Question is - Man Lo Hamre 7  Object Hai Vo Samne Key Value Pairs me Hai Same Properties Le Rhae Hai Bas Value Change Karna Hai To Ham Kya Karege Ham Constructor Function Baana Le Or Constructor Function Es5  Me Aata Hai ab Es6 Me Class Constructor use hota hai  Js Isse Kya Hoga Ki Hamko ek Function Mil Jayege Jisme Value Daalege Or Ek Object Ban Jayega...Formal Function camelCase  Me Likhe Jate hai Or Function ParsalCase Me Likha Jata Hai...
+
+Es6:-
+class User {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+let user1 = new User("Harsh", 22);
+let user2 = new User("Amit", 25);
+
+
+new keyword se naya object banta hai
+
+this us naye object ko refer karta hai
+
+Es5-
+Constructor Function (ES5 Style)
+
+
+function User(name,age){
+    this.name = name;
+    this.age = age;
+}
+let user1 = new User("Harsh", 23)
+console.log(user1);
+
+
+
+Nested Objects (Object ke andar object):-
+let user = {
+  name: "Harsh",
+  address: {
+    city: "Delhi",
+    pin: 110001,
+    country: "India"
+  },
+  education: {
+    degree: "BCA",
+    year: 2025
+  }
+};
+
+console.log(user.address.city);     // "Delhi"
+console.log(user.education.degree); // "BCA"
+
+
+
+Object Methods (Function inside Object):-
+let user = {
+  name: "Harshu",
+  greet: function() {
+    console.log("Hello " + this.name);
+  }
+};
+
+user.greet();
+
+
+example 2-
+
+let calculator = {
+  num1: 10,
+  num2: 5,
+
+  add: function() {
+    return this.num1 + this.num2;
+  },
+
+  multiply() {                // Short syntax (ES6)
+    return this.num1 * this.num2;
+  },
+
+  greet: () => {
+    console.log(`Hello from ${this}`);   // Arrow function mein this issue ho sakta hai
+  }
+};
+
+console.log(calculator.add());      // 15
+console.log(calculator.multiply()); // 50
+
+
+Loop Object:-
+👉 Jab object me multiple properties ho
+👉 Aur hume sab keys ya values access karni ho
+
+
+
+for (let key in user) {
+  console.log(key, user[key]);
+}
+
+ 
+
+
+Method In Object :-
+
+
+Object.keys()
+object ki key nikaln e ke lye iska Use Hote Hai
+Main HaiKi Array return karta hai
+let user = { name: "Harsh", age: 22 };
+
+console.log(Object.keys(user));
+
+
+
+Output:- ["name",age]
+
+2 Object.value
+Object is Value Return Karta Hai Ek Array me andar
+let user = { name: "Harsh", age: 22 };
+
+console.log(Object.values(user));
+
+Output:-
+["harsh",22]
+
+
+
+3. Object.entries()
+
+Key And Value Paid date Deta or Value ek Array ke array me return Karta Hai
+let user = { name: "Harsh", age: 22 };
+
+console.log(Object.entries(user));
+
+
+OutPut :
+[["name":"Harsh"],["age":22]]
+
+
+4,Object.assign():-
+Object ko copy ya merge Karne karte hai Dono Karta Hai
+
+Example 1 — Copy
+
+
+let user = { name: "Harsh", age: 22 };
+
+let copy = Object.assign({}, user);
+
+copy.age = 30;
+
+console.log(user); // age 22 (original safe)
+console.log(copy); // age 30
+👉 {} target object hai
+👉 user source object
+
+Example 2 — Merge
+
+
+let obj1 = { a: 1 };
+let obj2 = { b: 2 };
+
+let result = Object.assign({}, obj1, obj2);
+
+console.log(result);
+
+
+Output:
+{ a:1, b:2 }
+
+
+
+
+
+5-Object.freeze()
+
+
+👉 Object ko fully lock kar deta hai
+👉 Add / Update / Delete nahi kar sakte
+
+example
+
+let user = { name: "Harsh", age: 22 };
+
+Object.freeze(user);
+
+user.age = 30;     // ❌ change nahi hoga
+user.city = "Delhi"; // ❌ add nahi hoga
+delete user.name;  // ❌ delete nahi hoga
+
+console.log(user);
+
+
+Output:
+
+{ name: "Harsh", age: 22 }
+
+
+
+6-Object.seal()
+
+👉 Add/Delete nahi kar sakte
+👉 Update kar sakte ho
+
+let user = { name: "Harsh", age: 22 };
+
+Object.seal(user);
+
+user.age = 30;   // ✅ update allowed
+user.city = "Delhi"; // ❌ add not allowed
+delete user.name; // ❌ delete not allowed
+
+console.log(user);
+
+
+Output:
+
+{ name: "Harsh", age: 30 }
+
+
+
+7-hasOwnProperty()
+
+Check karta hai property exist karti hai ya nahi
+
+let user = { name: "Harsh", age: 22 };
+
+console.log(user.hasOwnProperty("name")); // true
+console.log(user.hasOwnProperty("city")); // false
+
+
+8- Object.fromEntries()
+
+👉 Array of key-value ko object me convert karta hai
+
+let arr = [
+  ["name", "Harsh"],
+  ["age", 22]
+];
+
+let obj = Object.fromEntries(arr);
+
+console.log(obj);
+
+
+Output:
+
+{ name: "Harsh", age: 22 }
