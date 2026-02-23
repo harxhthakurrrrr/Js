@@ -1641,3 +1641,525 @@ console.log(obj);
 Output:
 
 { name: "Harsh", age: 22 }
+
+
+
+
+Function:-
+👉 Function ek block of code hota hai
+👉 Jo ek specific kaam karta hai
+👉 Aur baar-baar reuse ho sakta hai
+
+
+Basic Syntax (Function Declaration)
+function greet() {
+  console.log("Hello");
+}
+
+greet(); // function call
+
+Parameters vs Arguments
+function add(a, b) {   // a, b = parameters
+  return a + b;
+}
+
+add(5, 3); // 5,3 = arguments
+
+
+Return Kya Hota Hai?
+jaise man lo ham kisse Dukan Par Hamne kuch Paise Diya Or Vo Hamko Ek Kuch Deta Hai Vo Hota Hai Return
+Aise function me hota hai ham arg me kuch value hai vo para me leta hai hamko return kar ke deta hai Or ham usko Kisse Variable me Store KAr Lete Hai (Function ke andar se value bahar bhejna)
+Example:-
+function square(num) {
+return num * num;
+}
+
+console.log(square(4));
+agar ham retun ke baad koi code likhte hai return ke baad ka code nahi chalta hai return se phle ka chlata hai
+function demo() {
+console.log("12");
+return;
+console.log("13");
+}
+demo();
+Ouput Bta Manish Sir 3+Exper
+
+Function Kitne Type Ke Hote Hain?
+
+Function Declaration:-
+
+
+function name(){
+}
+
+
+Features:
+
+Hoisted hota hai
+
+Function ko pehle call kar sakte ho
+
+
+
+greet();   // ✅ chalega
+
+function greet() {
+console.log("Hello");
+}
+mtlab Function Dclarerege me Hosring hai
+
+
+
+Function Expression:-
+const greet = function() {
+console.log("Hello");
+};
+
+
+Isme Hosting Nahi Hote Hai
+greet()/// Nahi Chalega
+const greet = function() {
+console.log("Hello");
+};
+
+
+Function Experssion me hosting nahi hota hai
+
+
+Arrow Function:-
+
+Arrow function kabhi hoist nahi hota
+chahe tum usse declaration ya expression jaisa bhi likho.
+
+Arrow function hamesha variable me store hota hai (let/const)
+aur let / const hoist nahi hote (TDZ).
+
+
+test(); // ❌ error
+const test = () => {
+console.log("Arrow");
+};
+
+Anonymous Function :-
+Yeh Vo Function Hote Hai Jinka Koi Naam Nahi Hota Hai :-
+example:-
+const greet = function(){
+console.log("Hello"
+}
+
+
+CallBack Me Be AnonyMoues Function Hota Hai
+
+
+setTimeout(function(){
+console.log("Heloo")
+},1000);
+
+
+
+IIFC Function (Immediately Invoked Function Expression)
+Jo FUnction Bante Hi Turant Run Ho Jaaye
+(function(){
+console.log("hello"
+})();
+Define Hua
+Turant Execte Ho jaata hai
+
+
+Arrow IIFw FUnction()
+(()=>{
+
+Console.log("hello"
+})();
+
+Default Parameter:-
+yeh kya bote hai jab ham ko value Argyment nahi milte Ham by default Ham use value KO parameter me access kar lete hai
+function greet(name = "Guest") {
+  console.log("Hello " + name);
+}
+
+greet();       // Hello Guest
+greet("Harsh") // Hello Harsh
+
+function greet(a,b="harsh"){
+Console.log(a , b)
+}
+greet(1);
+
+Rest Parameter
+Mutiple value Ko Khayi Se Reseve karn yha collect karna
+function sum(...n){
+console.log(n)
+}
+sun(1,2,3,4,4,5,5,5,6)
+
+
+
+Callback Function
+
+
+Jo function dusre function ko argument me diya jata hai
+
+function greet(name, callback) {
+  console.log("Hello " + name);
+  callback();
+}
+
+greet("Harsh", function() {
+  console.log("Bye");
+});
+
+
+6️⃣ Function Scope
+
+👉 Function ke andar ka variable bahar access nahi hota
+
+function test() {
+  let x = 10;
+}
+
+console.log(x); // ❌ Error
+
+
+
+Higher Order Function (HOF):-
+
+
+HIGH ORDER FUNCTION & CALLBACK NOTES
+
+CALLBACK FUNCTION
+
+Definition:
+Callback function wo function hota hai jo kisi dusre function ko argument me diya jata hai.
+
+Example:
+
+function greet(callback) {
+callback();
+}
+
+function sayHi() {
+console.log("Hi");
+}
+
+greet(sayHi);
+
+Yaha:
+
+sayHi = Callback Function
+
+Kyunki wo argument me pass kiya gaya
+
+HIGH ORDER FUNCTION (HOF)
+
+Definition:
+High Order Function wo function hota hai jo:
+
+Function ko argument me accept kare
+OR
+
+Function return kare
+
+Example 1 (Function accept kare)
+
+function greet(callback) {
+callback();
+}
+
+Yaha greet = High Order Function
+Kyuki wo function accept kar raha hai
+
+Example 2 (Function return kare)
+
+function outer() {
+return function() {
+console.log("Inner Function");
+};
+}
+
+Yaha outer = High Order Function
+
+ARRAY METHODS = HIGH ORDER FUNCTIONS
+
+Example:
+
+let arr = [1,2,3];
+
+arr.map(function(num) {
+return num * 2;
+});
+
+Yaha:
+
+map() = High Order Function
+
+function(num) = Callback Function
+
+
+
+
+Function Vs Method
+Function KE block of ode ko sepeacify task ke proform karne ke liye lya jaanta hai
+let person = {
+  name: "Harsh",
+  age: 20,
+
+  // Yeh method hai (object ke andar function)
+  intro: function() {
+    console.log("Mera naam " + this.name + " hai");
+  }
+};
+
+person.intro();   // Mera naam Harsh hai
+
+
+method kya jise jise obeject ke andar jo itro naam ka function baana rahkah hai v us object ka methd hai method be ek function ke tarafa hta hai
+
+
+
+
+
+///////////////////////////////////////////////
+
+This Keyword :-
+this keyword yeh pointer ki taraf kaam karte hai ahai agar usko global me use karte hai avo to window object me point karte hai agar uske kisse function ke anadra define karte without stirct mode to vo hamre window ko hi point karta hai oar ham strict mode me aajante hai js ke to vo jo function ke scope ke andart define hua hai undefiend det ahia thise alag jagha alag behavior kat ahia window m window obejct mtlav brower or node global object hota hai 
+or yeh alag jagha alag alag behavior karta hai 
+
+
+Object Method Me This Keyword  
+let user ={
+name : "Harshu"
+greet : function (){
+console.log(this.name);
+}
+};
+Yaha Par This = user object
+output = Harshu 
+
+Rule :- jis object me Function Call Kiya This Usko Refer Karega 
+
+
+
+Normal Function ME THis
+function test(){
+console.log(this)
+}
+test();
+brower me window 
+node me Global Object 
+Agar ham Stricct mode  Use karte hai apne js me "use strict" Me uska Undefined 
+
+
+
+Arrow Function me This 
+arrow fucntion me this nahihota hai vo parent ka this use karta hai 
+
+let user = {
+name : "harshu"
+greet :()=>{
+console.log(this.name);
+}
+};
+This is Undefiend dega muje 
+
+
+
+
+Constructor Function :-
+👉 Special function hota hai
+👉 Jisse hum same structure ke multiple objects bana sakte hain
+
+
+function User(name) {
+  this.name = name;
+}
+
+let u1 = new User("Harshu");
+console.log(u1.name);
+
+
+🟢 Yaha kya ho raha hai?
+
+new keyword naya object banata hai
+
+this us naye object ko refer karta hai
+
+Properties us object me add ho jaati hain
+
+🟡 Kab use karte hain?
+
+👉 Jab:
+
+Multiple similar objects banana ho
+
+Same properties baar-baar repeat ho rahi ho
+
+
+
+
+
+
+
+
+Prototype :-
+Jaise Hamre function ke pass ek Special Propert Hote hai Protopye Ka use hote hota hai methods share karne ke liyee
+Example :- 
+function User(name){
+this.name =  name;
+}
+User.prototype.greet = function(){
+console.log("hello" + this.name);
+};
+
+let u1 = new User("Harsh");
+let u2 = new User("Amit")
+u1.greet();
+
+
+
+Prototype Chain :-
+jab js kisi property yeh method ko object me nahi para to wo uske prototype me dhoondta hai phir uske prtoptype ke protype me yeh chain chalti rehte hai 
+
+function User(name){
+this.name =  name;
+}
+User.prototype.greet = function(){
+console.log("hello" + this.name);
+};
+
+let u1 = new User("Harsh");
+let u2 = new User("Amit")
+u1.greet();
+
+
+jab tu likhte ho 
+u1.greet()
+js check karta hai kya greet u1 ke andar hai yha nahi nahimilte hai User>protoptype  me dkhta hai mil gaya tp function Run ho jaat hai 
+
+
+u1
+ ↓
+User.prototype
+ ↓
+Object.prototype
+ ↓
+null 
+
+
+
+
+Inhertaince :-
+Agar ek parent ka structure child ko dena ho:
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+class Student extends Person {
+  constructor(name, grade) {
+    super(name);
+    this.grade = grade;
+  }
+}
+
+let s1 = new Student("Harsh", "A");
+
+
+Clear Samjho////////
+
+Same properties chahiye → Constructor
+
+Same method share karna → Prototype
+
+Parent se child ko dena → Inheritance
+
+
+
+
+
+
+
+
+
+Call, Apply, Bind():-
+
+Call ();-
+
+call turant function ko call karta hai aur this ko jo tu chahta hai woh object bana deta hai.
+
+
+Apply()-
+Apply be Turant fuction Call Karte HAi pr sme jo value pass hote hai vo rray me hote hai 
+
+
+bind() Method
+bind function ko turant call nahi karta – ek naya function return karta hai jisme this permanently set ho jaata hai.
+
+
+// Ek object bana jisme firstname aur lastname hai
+let name = {
+  firstname: "Akshay",
+  lastname: "Saini"
+};
+
+let name2 = {
+  firstname: "Sachin",
+  lastname: "Tendulkar"
+};
+
+// Ek normal function jo this.firstname aur this.lastname use karta hai
+let printFullName = function(hometown, state) {
+  console.log(
+    this.firstname + " " + 
+    this.lastname + 
+    " from " + hometown + 
+    ", " + state
+  );
+};
+
+// 1. call() – turant call karta hai, this ko set karta hai
+printFullName.call(name, "Dehradun", "Uttarakhand");
+// Output: Akshay Saini from Dehradun, Uttarakhand
+
+// Dusre object pe call karo (function borrowing)
+printFullName.call(name2, "Mumbai", "Maharashtra");
+// Output: Sachin Tendulkar from Mumbai, Maharashtra
+
+// 2. apply() – same kaam, bas arguments array mein pass karo
+printFullName.apply(name2, ["Mumbai", "Maharashtra"]);
+// Output: Sachin Tendulkar from Mumbai, Maharashtra
+
+// 3. bind() – this set karta hai, lekin turant call nahi karta
+// Naya function return karta hai jo baad mein call kar sakte ho
+let printMyName = printFullName.bind(name2, "Mumbai", "Maharashtra");
+
+console.log(printMyName);   // function printFullName(hometown, state) {...}
+
+printMyName();  
+// Output: Sachin Tendulkar from Mumbai, Maharashtra
+
+
+
+
+
+Function Borrowing:-
+jab kisse bject ka method ham kisse dusre function me use karkar skhte haiusko ham function borrwing khate hai
+
+  
+let person1 = { name: "Harsh" };
+let person2 = { name: "Rahul" };
+
+function printName() {
+  console.log(this.name);
+}
+
+printName.call(person1);   // "Harsh"
+printName.call(person2);   // "Rahul"
+
+
+
+
+
+
+
