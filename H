@@ -2266,5 +2266,68 @@ Line by line code execute hota hai
 
 Values assign hoti hain
 
+👉 Pure Function
 
-Pure vs Impure Function:-
+Pure function sirf apne scope / input ke andar ka kaam karta hai,
+bahar (global / outer scope) kisi variable ko change nahi karta.
+
+Sirf apne input pe kaam karta hai
+
+Bahar ka kuch use ya change ❌
+
+Same input → same output
+
+Side effect nahi hota
+
+function add(a, b) {
+  return a + b;
+}
+
+Global variable change ❌
+
+Console / API / DOM ❌
+
+Output predictable ✅
+
+👉 Impure Function
+
+Impure function bahar ke variables pe depend karta hai ya unko change karta hai,
+is wajah se side effects ke chances badh jaate hain.
+
+Bahar ke variable use karta hai
+
+Ya bahar ke variable ko change karta hai
+
+Output har baar same ho ye zaroori nahi
+
+Side effect hota hai
+
+let x = 10;
+
+function add(a) {
+  return a + x; // bahar ke variable pe depend
+}
+
+Global state use/change ❌
+
+Console, DOM, API ✅
+
+Output unpredictable ❌
+
+👉 Side Effect ka matlab
+
+👉 Jab function apne kaam ke alawa bahar ki cheezon ko change kare
+ya unpe depend kare, use side effect kehte hain.
+
+Global variable change
+
+Console.log
+
+DOM update
+
+API call
+
+🧠 One-line yaad rakhne ke liye
+
+“Sirf input pe kaam kare → Pure,
+Bahar ka state touch kare → Impure.
