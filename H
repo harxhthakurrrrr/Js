@@ -1922,11 +1922,11 @@ method kya jise jise obeject ke andar jo itro naam ka function baana rahkah hai 
 ///////////////////////////////////////////////
 
 This Keyword :-
-this keyword yeh pointer ki taraf kaam karte hai ahai agar usko global me use karte hai avo to window object me point karte hai agar uske kisse function ke anadra define karte without stirct mode to vo hamre window ko hi point karta hai oar ham strict mode me aajante hai js ke to vo jo function ke scope ke andart define hua hai undefiend det ahia thise alag jagha alag behavior kat ahia window m window obejct mtlav brower or node global object hota hai 
-or yeh alag jagha alag alag behavior karta hai 
+this keyword yeh pointer ki taraf kaam karte hai ahai agar usko global me use karte hai avo to window object me point karte hai agar uske kisse function ke anadra define karte without stirct mode to vo hamre window ko hi point karta hai oar ham strict mode me aajante hai js ke to vo jo function ke scope ke andart define hua hai undefiend det ahia thise alag jagha alag behavior kat ahia window m window obejct mtlav brower or node global object hota hai
+or yeh alag jagha alag alag behavior karta hai
 
 
-Object Method Me This Keyword  
+Object Method Me This Keyword
 let user ={
 name : "Harshu"
 greet : function (){
@@ -1934,9 +1934,9 @@ console.log(this.name);
 }
 };
 Yaha Par This = user object
-output = Harshu 
+output = Harshu
 
-Rule :- jis object me Function Call Kiya This Usko Refer Karega 
+Rule :- jis object me Function Call Kiya This Usko Refer Karega
 
 
 
@@ -1945,14 +1945,14 @@ function test(){
 console.log(this)
 }
 test();
-brower me window 
-node me Global Object 
-Agar ham Stricct mode  Use karte hai apne js me "use strict" Me uska Undefined 
+brower me window
+node me Global Object
+Agar ham Stricct mode  Use karte hai apne js me "use strict" Me uska Undefined
 
 
 
-Arrow Function me This 
-arrow fucntion me this nahihota hai vo parent ka this use karta hai 
+Arrow Function me This
+arrow fucntion me this nahihota hai vo parent ka this use karta hai
 
 let user = {
 name : "harshu"
@@ -1960,7 +1960,7 @@ greet :()=>{
 console.log(this.name);
 }
 };
-This is Undefiend dega muje 
+This is Undefiend dega muje
 
 
 
@@ -1971,7 +1971,7 @@ Constructor Function :-
 
 
 function User(name) {
-  this.name = name;
+this.name = name;
 }
 
 let u1 = new User("Harshu");
@@ -2003,7 +2003,7 @@ Same properties baar-baar repeat ho rahi ho
 
 Prototype :-
 Jaise Hamre function ke pass ek Special Propert Hote hai Protopye Ka use hote hota hai methods share karne ke liyee
-Example :- 
+Example :-
 function User(name){
 this.name =  name;
 }
@@ -2018,7 +2018,7 @@ u1.greet();
 
 
 Prototype Chain :-
-jab js kisi property yeh method ko object me nahi para to wo uske prototype me dhoondta hai phir uske prtoptype ke protype me yeh chain chalti rehte hai 
+jab js kisi property yeh method ko object me nahi para to wo uske prototype me dhoondta hai phir uske prtoptype ke protype me yeh chain chalti rehte hai
 
 function User(name){
 this.name =  name;
@@ -2032,18 +2032,18 @@ let u2 = new User("Amit")
 u1.greet();
 
 
-jab tu likhte ho 
+jab tu likhte ho
 u1.greet()
-js check karta hai kya greet u1 ke andar hai yha nahi nahimilte hai User>protoptype  me dkhta hai mil gaya tp function Run ho jaat hai 
+js check karta hai kya greet u1 ke andar hai yha nahi nahimilte hai User>protoptype  me dkhta hai mil gaya tp function Run ho jaat hai
 
 
 u1
- ↓
+↓
 User.prototype
- ↓
+↓
 Object.prototype
- ↓
-null 
+↓
+null
 
 
 
@@ -2051,16 +2051,20 @@ null
 Inhertaince :-
 Agar ek parent ka structure child ko dena ho:
 class Person {
-  constructor(name) {
-    this.name = name;
-  }
+constructor(name) {
+    **this.name = name;**
+
+}
 }
 
 class Student extends Person {
-  constructor(name, grade) {
-    super(name);
-    this.grade = grade;
-  }
+constructor(name, grade) {
+    **super(name);**
+    \*\*this.grade = grade;\*\*
+
+
+
+}
 }
 
 let s1 = new Student("Harsh", "A");
@@ -2090,7 +2094,7 @@ call turant function ko call karta hai aur this ko jo tu chahta hai woh object b
 
 
 Apply()-
-Apply be Turant fuction Call Karte HAi pr sme jo value pass hote hai vo rray me hote hai 
+Apply be Turant fuction Call Karte HAi pr sme jo value pass hote hai vo rray me hote hai
 
 
 bind() Method
@@ -2099,23 +2103,28 @@ bind function ko turant call nahi karta – ek naya function return karta hai ji
 
 // Ek object bana jisme firstname aur lastname hai
 let name = {
-  firstname: "Akshay",
-  lastname: "Saini"
+firstname: "Akshay",
+lastname: "Saini"
 };
 
 let name2 = {
-  firstname: "Sachin",
-  lastname: "Tendulkar"
+firstname: "Sachin",
+lastname: "Tendulkar"
 };
 
 // Ek normal function jo this.firstname aur this.lastname use karta hai
 let printFullName = function(hometown, state) {
-  console.log(
-    this.firstname + " " + 
-    this.lastname + 
-    " from " + hometown + 
-    ", " + state
-  );
+console.log(
+    **this.firstname + " " +**
+    \*\*this.lastname +\*\* 
+
+    \*\*" from " + hometown +\*\* 
+
+    \*\*", " + state\*\*
+
+
+
+);
 };
 
 // 1. call() – turant call karta hai, this ko set karta hai
@@ -2136,7 +2145,7 @@ let printMyName = printFullName.bind(name2, "Mumbai", "Maharashtra");
 
 console.log(printMyName);   // function printFullName(hometown, state) {...}
 
-printMyName();  
+printMyName();
 // Output: Sachin Tendulkar from Mumbai, Maharashtra
 
 
@@ -2146,12 +2155,12 @@ printMyName();
 Function Borrowing:-
 jab kisse bject ka method ham kisse dusre function me use karkar skhte haiusko ham function borrwing khate hai
 
-  
+
 let person1 = { name: "Harsh" };
 let person2 = { name: "Rahul" };
 
 function printName() {
-  console.log(this.name);
+console.log(this.name);
 }
 
 printName.call(person1);   // "Harsh"
@@ -2161,5 +2170,101 @@ printName.call(person2);   // "Rahul"
 
 
 
+Closure:-
 
 
+
+Execution Context:-
+jab bhi javaScript ka code Run karta haiWo ekBox baanta hai jsime code execute hote hai us box ko execution Context Bolte hai 
+
+Type Of Exection Context:-
+
+1-Global Execution Context:-
+Jab program start hota hai tab sabse pehle ye banta hai
+
+Sirf 1 hi Global Context hota hai
+
+
+
+example :-
+console.log(a);      // undefined (memory phase mein undefined tha)
+var a = 10;
+
+function sayHi() {
+  console.log("Hi bhai");
+}
+
+sayHi();   // yeh call hone pe naya function execution context Banega
+
+aha a aur test global context me store honge.
+
+
+
+
+2- Function Exection Context :-
+jab bhi function call hote hai or naya Har function call par naya context banta hai	
+
+
+
+
+Execution Context ke 2 Phase hote hain:-
+
+Memory phase :-
+
+is phase me 
+Memory Phase Mein Kya Store Hota Hai?
+Yeh phase code execute hone se pehle chalta hai – isliye isko hoisting phase bhi kehte hain.
+Is phase mein JS sirf memory allocate karta hai, value assign nahi karta (except functions ke liye).
+Yeh cheezein hoti hain:
+
+Variables (var, let, const)
+Sabhi variables ko memory mein jagah milti hai
+Value = undefined set ho jaati hai (sirf var ke liye)
+let aur const bhi memory mein jagah lete hain, lekin uninitialized rehte hain (TDZ mein – Temporal Dead Zone)
+
+Function Declarations (function naam() {})
+Poora function memory mein store ho jaata hai
+Yani function ka naam aur uska pura code dono store ho jaate hain
+Isliye function ko pehle call kar sakte ho (hoisting hota hai)
+
+Normal Variables ki value
+nahi store hoti
+sirf undefined (var ke case mein) ya uninitialized (let/const)
+actual value tabhi assign hoti hai jab Code Execution Phase mein line aati hai
+
+
+Ek Chhota Code Samajh Le
+JavaScriptconsole.log(a);         // undefined
+console.log(sum);       // [Function: sum] – poora function print hota hai
+
+var a = 10;
+
+function sum(x, y) {
+  return x + y;
+}
+
+let b = 20;
+console.log(b);         // 20
+Memory Phase (Creation Phase) mein kya hua:
+
+a → undefined (kyunki var hai)
+sum → poora function store ho gaya (function declaration hoisted)
+b → memory mein jagah mili, lekin uninitialized (TDZ – let/const ke liye)
+
+Code Execution Phase mein kya hua:
+
+console.log(a) → undefined (kyunki abhi tak value nahi mili)
+console.log(sum) → poora function print (kyunki memory mein tha)
+a = 10 → ab a ko value mili
+sum call hone pe naya execution context bana
+b = 20 → ab b ko value mili
+
+
+2. Code Phase (Execution Phase)
+
+Line by line code execute hota hai
+
+Values assign hoti hain
+
+
+Pure vs Impure Function:-
