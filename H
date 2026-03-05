@@ -2060,8 +2060,7 @@ constructor(name) {
 class Student extends Person {
 constructor(name, grade) {
     **super(name);**
-    \*\*this.grade = grade;\*\*
-
+    \*\*this.grade = grade;\*\*
 
 
 }
@@ -2116,11 +2115,14 @@ lastname: "Tendulkar"
 let printFullName = function(hometown, state) {
 console.log(
     **this.firstname + " " +**
-    \*\*this.lastname +\*\* 
+    \*\*this.lastname +\*\*
+    \\\*\\\*" from " + hometown +\\\*\\\* 
 
-    \*\*" from " + hometown +\*\* 
+    \\\*\\\*", " + state\\\*\\\*
 
-    \*\*", " + state\*\*
+
+
+
 
 
 
@@ -2175,7 +2177,7 @@ Closure:-
 
 
 Execution Context:-
-jab bhi javaScript ka code Run karta haiWo ekBox baanta hai jsime code execute hote hai us box ko execution Context Bolte hai 
+jab bhi javaScript ka code Run karta haiWo ekBox baanta hai jsime code execute hote hai us box ko execution Context Bolte hai
 
 Type Of Exection Context:-
 
@@ -2191,7 +2193,7 @@ console.log(a);      // undefined (memory phase mein undefined tha)
 var a = 10;
 
 function sayHi() {
-  console.log("Hi bhai");
+  console.log("Hi bhai");
 }
 
 sayHi();   // yeh call hone pe naya function execution context Banega
@@ -2202,7 +2204,7 @@ aha a aur test global context me store honge.
 
 
 2- Function Exection Context :-
-jab bhi function call hote hai or naya Har function call par naya context banta hai	
+jab bhi function call hote hai or naya Har function call par naya context banta hai
 
 
 
@@ -2211,7 +2213,7 @@ Execution Context ke 2 Phase hote hain:-
 
 Memory phase :-
 
-is phase me 
+is phase me
 Memory Phase Mein Kya Store Hota Hai?
 Yeh phase code execute hone se pehle chalta hai – isliye isko hoisting phase bhi kehte hain.
 Is phase mein JS sirf memory allocate karta hai, value assign nahi karta (except functions ke liye).
@@ -2240,7 +2242,7 @@ console.log(sum);       // [Function: sum] – poora function print hota hai
 var a = 10;
 
 function sum(x, y) {
-  return x + y;
+  return x + y;
 }
 
 let b = 20;
@@ -2280,7 +2282,7 @@ Same input → same output
 Side effect nahi hota
 
 function add(a, b) {
-  return a + b;
+  return a + b;
 }
 
 Global variable change ❌
@@ -2305,7 +2307,7 @@ Side effect hota hai
 let x = 10;
 
 function add(a) {
-  return a + x; // bahar ke variable pe depend
+  return a + x; // bahar ke variable pe depend
 }
 
 Global state use/change ❌
@@ -2323,7 +2325,7 @@ Global variable change
 
 Console.log
 
-DOM update
+DOM update:
 
 API call
 
@@ -2331,3 +2333,163 @@ API call
 
 “Sirf input pe kaam kare → Pure,
 Bahar ka state touch kare → Impure.
+
+
+
+
+Call Stack:-jab hamra koi function phle aar run hota haito ek apne andar ek enivermenet baana leta hai is enverimenet ko ham exection context bolte hai ham hamre call stack me kya hota hai sabse phle call hua vo sabse last me aayega last in first out yeh call stack main hamra syanc code ke liye chalta hai 
+Call Stack ek stack (dabba) hai jisme **function calls** ek ke upar ek rakhe jaate hain.  
+Yeh **LIFO** follow karta hai:  
+- Last In (sabse upar wala) pehle Out (pop) hota hai
+
+
+
+
+## 3. Call Stack Ka Flow (Kaise Kaam Karta Hai)
+
+1. Program shuru hone pe → **Global Execution Context** stack pe push hota hai (sabse neeche)
+
+2. Jab koi function call hota hai → **naya Function Execution Context** stack pe upar push ho jaata hai
+
+3. Function ke andar aur function call hua → aur ek context push
+
+4. Function khatam hua (return ya } khatam) → woh context **pop** ho jaata hai
+
+5. Stack khali hone tak yeh chalta rahta hai
+
+**Example Code + Stack Flow**
+
+```js
+function add(a, b) {
+  return a + b;
+}
+
+function multiply(x, y) {
+  let sum = add(x, y);   // yahan add call hoga
+  return sum * 2;
+}
+
+multiply(5, 3)
+
+Example:-
+function first() {
+  second();
+}
+
+function second() {
+  third();
+}
+
+function third() {
+  console.log("Hello");
+}
+
+first();//// hello 
+Call Stack में क्या होता है:
+
+Functions execute होते हैं
+
+Synchronous code run होता है
+
+Function call → stack में push
+
+Function complete → stack से pop
+
+
+
+Event Loop में क्या होता है:
+
+यह check करता है कि Call Stack खाली है या नहीं
+
+अगर खाली है → Queue (callbacks / promises) से task उठाकर Call Stack में डाल देता है
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+First Class Function  :-First Class Function का मतलब है कि JavaScript में function को value की तरह treat किया जाता है।
+मतलब function को:
+
+variable में store कर सकते हैं
+
+argument की तरह pass कर सकते हैं
+
+function से return कर सकते हैं
+
+
+
+
+
+
+1️⃣ Variable में store कर सकते हैं
+
+const greet = function () {
+  console.log("Hello");
+};
+greet();
+
+2️⃣ Function को argument की तरह pass कर सकते हैं
+function sayHi() {
+  console.log("Hi");
+}
+
+function callFunction(fn) {
+  fn();
+}
+
+callFunction(sayHi);
+Function से function return कर सकते हैं
+function outer() {
+  return function () {
+    console.log("Hello");
+  };
+}
+
+const result = outer();
+result();
+
+
+
+4️⃣ Object के अंदर function रख सकते हैं
+const user = {
+  greet: function () {
+    console.log("Hello User");
+  }
+};
+
+user.greet();
+
+
+
+
+
+
+
+
+
+
+
+
+example :-\
+function greet() {
+  console.log("Hello");
+}
+
+const sayHello = greet; // function variable में store
+
+sayHello();
+\
