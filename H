@@ -2116,9 +2116,11 @@ let printFullName = function(hometown, state) {
 console.log(
     **this.firstname + " " +**
     \*\*this.lastname +\*\*
-    \\\*\\\*" from " + hometown +\\\*\\\* 
+    \\\*\\\*" from " + hometown +\\\*\\\*
+    \\\\\\\*\\\\\\\*", " + state\\\\\\\*\\\\\\\*
 
-    \\\*\\\*", " + state\\\*\\\*
+
+
 
 
 
@@ -2337,9 +2339,9 @@ Bahar ka state touch kare → Impure.
 
 
 
-Call Stack:-jab hamra koi function phle aar run hota haito ek apne andar ek enivermenet baana leta hai is enverimenet ko ham exection context bolte hai ham hamre call stack me kya hota hai sabse phle call hua vo sabse last me aayega last in first out yeh call stack main hamra syanc code ke liye chalta hai 
-Call Stack ek stack (dabba) hai jisme **function calls** ek ke upar ek rakhe jaate hain.  
-Yeh **LIFO** follow karta hai:  
+Call Stack:-jab hamra koi function phle aar run hota haito ek apne andar ek enivermenet baana leta hai is enverimenet ko ham exection context bolte hai ham hamre call stack me kya hota hai sabse phle call hua vo sabse last me aayega last in first out yeh call stack main hamra syanc code ke liye chalta hai
+Call Stack ek stack (dabba) hai jisme **function calls** ek ke upar ek rakhe jaate hain.
+Yeh **LIFO** follow karta hai:
 - Last In (sabse upar wala) pehle Out (pop) hota hai
 
 
@@ -2360,46 +2362,88 @@ Yeh **LIFO** follow karta hai:
 **Example Code + Stack Flow**
 
 ```js
+
 function add(a, b) {
-  return a + b;
+
+\&nbsp; return a + b;
+
 }
 
+
+
 function multiply(x, y) {
-  let sum = add(x, y);   // yahan add call hoga
-  return sum * 2;
+
+\&nbsp; let sum = add(x, y);   // yahan add call hoga
+
+\&nbsp; return sum \\\* 2;
+
 }
+
+
 
 multiply(5, 3)
 
-Example:-
-function first() {
-  second();
-}
 
-function second() {
-  third();
-}
 
-function third() {
-  console.log("Hello");
-}
+#### Example:-
 
-first();//// hello 
-Call Stack में क्या होता है:
+#### function first() {
+
+#### \&nbsp; second();
+
+#### }
+
+#### 
+
+#### function second() {
+
+#### \&nbsp; third();
+
+#### }
+
+#### 
+
+#### function third() {
+
+#### \&nbsp; console.log("Hello");
+
+#### }
+
+#### 
+
+#### first();//// hello 
+
+# Call Stack में क्या होता है:
+
+
 
 Functions execute होते हैं
 
+
+
 Synchronous code run होता है
 
+
+
 Function call → stack में push
+
+
 
 Function complete → stack से pop
 
 
 
-Event Loop में क्या होता है:
+
+
+
+
+# Event Loop में क्या होता है:
+
+
 
 यह check करता है कि Call Stack खाली है या नहीं
+
+
 
 अगर खाली है → Queue (callbacks / promises) से task उठाकर Call Stack में डाल देता है
 
@@ -2421,75 +2465,252 @@ Event Loop में क्या होता है:
 
 
 
-First Class Function  :-First Class Function का मतलब है कि JavaScript में function को value की तरह treat किया जाता है।
-मतलब function को:
-
-variable में store कर सकते हैं
-
-argument की तरह pass कर सकते हैं
-
-function से return कर सकते हैं
 
 
 
 
 
 
-1️⃣ Variable में store कर सकते हैं
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# First Class Function  :-First Class Function का मतलब है कि JavaScript में function को value की तरह treat किया जाता है।
+
+# मतलब function को:
+
+# 
+
+# variable में store कर सकते हैं
+
+# 
+
+# argument की तरह pass कर सकते हैं
+
+# 
+
+# function से return कर सकते हैं
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 1️⃣ Variable में store कर सकते हैं
+
+
 
 const greet = function () {
-  console.log("Hello");
+
+\&nbsp; console.log("Hello");
+
 };
+
 greet();
 
-2️⃣ Function को argument की तरह pass कर सकते हैं
+
+
+# 2️⃣ Function को argument की तरह pass कर सकते हैं
+
 function sayHi() {
-  console.log("Hi");
+
+\&nbsp; console.log("Hi");
+
 }
+
+
 
 function callFunction(fn) {
-  fn();
+
+\&nbsp; fn();
+
 }
+
+
 
 callFunction(sayHi);
-Function से function return कर सकते हैं
+
+# Function से function return कर सकते हैं
+
 function outer() {
-  return function () {
-    console.log("Hello");
-  };
+
+\&nbsp; return function () {
+
+\&nbsp;   console.log("Hello");
+
+\&nbsp; };
+
 }
 
+
+
 const result = outer();
+
 result();
 
 
 
-4️⃣ Object के अंदर function रख सकते हैं
+
+
+
+
+# 4️⃣ Object के अंदर function रख सकते हैं
+
 const user = {
-  greet: function () {
-    console.log("Hello User");
-  }
+
+\&nbsp; greet: function () {
+
+\&nbsp;   console.log("Hello User");
+
+\&nbsp; }
+
 };
+
+
 
 user.greet();
 
+example :-\\\\
 
-
-
-
-
-
-
-
-
-
-
-example :-\
 function greet() {
-  console.log("Hello");
+
+\&nbsp; console.log("Hello");
+
 }
+
+
 
 const sayHello = greet; // function variable में store
 
+
+
 sayHello();
-\
+
+\\\\
+
+
+**Event Loop :-**
+===
+
+
+
+
+
+
+
+
+
+
+
+# **Starvation क्या होता है:-**
+
+
+
+**जब low-priority tasks को बार-बार wait करना पड़े क्योंकि high-priority tasks लगातार execute हो रहे हों।**
+
+
+
+**JavaScript में यह आमतौर पर Microtask Queue की वजह से हो सकता है।**  
+
+**Example :-** 
+
+**function run() {**
+
+  **Promise.resolve().then(run);**
+
+**}**
+
+
+
+**run();**
+
+
+
+**setTimeout(() => {**
+
+  **console.log("Timeout executed");**
+
+**}, 0);**
+
+
+
+**क्या होगा**
+
+**Promise → Microtask**
+
+**Promise → Microtask**
+
+**Promise → Microtask**
+
+**...**
+
+
+
+**Microtask लगातार add होते रहेंगे।**
+
+
+
+**इसलिए:**
+
+
+
+**setTimeout (Macrotask) को run होने का मौका नहीं मिलेगा**
+
+**Result**
+
+**Timeout executed**
+
+
+
+**यह कभी print ही नहीं होगा।**
+
+
+
+**Reason**
+
+**Event Loop rule**
+
+**1. Stack empty**
+
+**2. Microtask queue run (पूरा)**
+
+**3. Macrotask queue run**
+
+
+
+**लेकिन यहाँ Microtask queue कभी empty नहीं हो रही, इसलिए Macrotask starvation हो जाता है।**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
