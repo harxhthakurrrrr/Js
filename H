@@ -2699,7 +2699,160 @@ sayHello();
 
 
 
-Event Loop :-
+
+Template Literals:-
+Template Literals ES6 का feature है जिससे string को आसानी से लिख सकते हैं और variables embed कर सकते हैं।
+example :
+let age = 22;
+Let name = "harsh";
+console.log(`my ${age} is And My Name Is ${name}`);
+
+
+
+
+
+
+Destructuring:-
+Destructuring Ek Aise Tarka Hote Hai Jisse Hum Kisse be array Yha String Our Object ki Value Ko Assani se Nikala KAr Ek Variable me Nikala Sakhte HAi
+
+
+Some Example Of Destructuring In AnySulation :-
+ 1. Array Destructuring 📦
+//// Purana Tarik 
+let fruits = ["Apple", "Mango", "Banana"];
+let first = fruits[0];  // Apple
+let second = fruits[1]; // Mango
+let third = fruits[2];  // Banana
+
+///// Naya tareeka (Destructuring):-
+let Harsh  = ["Apple", "Mango", "Banana"];
+const [A , B, C] = Harsh
+console.log(A);  // Apple
+console.log(B); // Mango
+console.log(C);  // Banana
+
+
+Example 2: Skip karna (Ignore values)
+let colors = ["Red", "Green", "Blue", "Yellow"];
+
+// Sirf first aur third value chahiye
+
+
+let [first, , third] = colors;
+console.log(first);  // "Red"
+console.log(third); 
+
+Example 3: Default Values
+let fruits = ["Apple"];
+
+// Agar value nahi hai to default use karo
+let [fruit1, fruit2 = "Mango"] = fruits;
+
+console.log(fruit1); // "Apple"
+console.log(fruit2); // "Mango" (default value)
+
+
+
+Example 4: Swapping Variables
+let a = 10;
+let b = 20;
+
+// Swap karna aasan ho gaya
+[a, b] = [b, a];
+
+console.log(a); // 20
+console.log(b); // 10
+
+
+
+
+
+
+
+2. Object Destructuring 📋
+// Purana tareeka
+let person = { name: "Rahul", age: 25, city: "Delhi" };
+let personName = person.name;
+let personAge = person.age;
+let personCity = person.city;
+
+//// New Tarika 
+let obj =
+{ name: "Rahul", age: 25, city: "Delhi" };
+let { name, age, city } = obj
+console.log(name); // "Rahul"
+console.log(age);  // 25
+console.log(city);
+
+
+Real Life Examples:
+Example 1: API Response se Data Nikalna
+// API se aaya data (jaise)
+
+
+let user = {
+    id: 101,
+    username: "rahul_123",
+    email: "rahul@gmail.com",
+    address: {
+        city: "Mumbai",
+        pincode: 400001
+    },
+    hobbies: ["Cricket", "Music"]
+};
+
+// Sirf kuch specific values chahiye
+let { username, email, address } = user;
+console.log(username); // "rahul_123"
+console.log(email);    // "rahul@gmail.com"
+console.log(address.city); // "Mumbai"
+
+// Alias dena (rename karna)
+let { username: userName, email: userEmail } = user;
+console.log(userName); // "rahul_123"
+
+
+
+
+Example 2: Nested Object Destructuring
+
+
+
+
+
+
+let student = {
+    name: "Priya",
+    marks: {
+        math: 95,
+        science: 89,
+        english: 92
+    },
+    college: "DU"
+};
+
+// Nested object se values nikalna
+let { name, marks: { math, science, english }, college } = student;
+
+console.log(`${name} ne math mein ${math}, science mein ${science} marks liye`);
+// Output: Priya ne math mein 95, science mein 89 marks liye
+
+
+
+
+
+Example 3: Default Values aur Optional Properties:-
+let product = {
+    name: "Laptop",
+    price: 50000
+    // discount property nahi hai
+};
+
+// Agar discount nahi hai to default 0 use karo
+let { name, price, discount = 0 } = product;
+
+console.log(`${name} - ₹${price}, Discount: ${discount}%`);
+// Output: Laptop - ₹50000, Discount: 0%
 
 
 
@@ -2711,6 +2864,105 @@ Event Loop :-
 
 
 
+Function में Destructuring:-
+const user = {
+  name: "Harshu",
+  age: 22
+};
+
+function showUser({name, age}) {
+  console.log(name, age);
+}
+
+showUser(user);
 
 
 
+3. Function Parameters mein Destructuring 🎭:-
+// Purana tareeka
+function printUser(user) {
+    console.log(user.name);
+    console.log(user.age);
+}
+
+
+// Naya tareeka (Destructuring)
+function printUser({ name, age, city = "Unknown" }) {
+    console.log(`Name: ${name}`);
+    console.log(`Age: ${age}`);
+    console.log(`City: ${city}`);
+}
+
+let user = { name: "Rahul", age: 25 };
+printUser(user);
+
+
+
+Example 2: Array as Parameter:-
+// Points [x, y, z] receive kar rahe hain
+function calculateDistance([x, y, z = 0]) {
+    return Math.sqrt(x*x + y*y + z*z);
+}
+
+console.log(calculateDistance([3, 4]));     // 5 (3D mein z=0 lega)
+console.log(calculateDistance([3, 4, 12])); // 13
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Spread / Rest:-
+Spread  = भेजना (Send) - Values ko bhej rahe ho
+Rest    = प्राप्त करना (Receive) - Values ko receive kar rahe ho
+Simple Examples se samajh:
+📤 Spread - Bhejna (Send)
+javascript
+
+let gifts = ["watch", "phone", "laptop"];
+
+// Gift ko bhej do function ko (spread se)
+function receiveGifts(item1, item2, item3) {
+    console.log("Mila:", item1, item2, item3);
+}
+
+receiveGifts(...gifts);  // 📦 Bhej diya
+// Output: Mila: watch phone laptop
+
+📥 Rest - Lena (Receive)
+javascript
+
+// Saare gifts receive kar lo (rest se)
+function packGifts(...saareGifts) {  // 📨 Receive kiye
+    console.log("Package mein hai:", saareGifts);
+}
+
+packGifts("watch", "phone", "laptop", "tablet");
+// Output: Package mein hai: ["watch", "phone", "laptop", "tablet"]
+
+Real Life Scenario 🏠
+Mom ne tujhe bheja tiffin:
+javascript
+
+let tiffin = ["roti", "sabzi", "salad", "achaar"];
+
+// 📤 Mom bhej rahi hai (Spread)
+function bhaiKaTiffin(...khana) {  // 📥 Tu receive kar raha hai (Rest)
+    console.log("Bhai ko kya kya mila:", khana);
+    console.log("Pehle khayega:", khana[0]); // roti
+}
+
+bhaiKaTiffin(...tiffin); 
+// Mom ne spread kiya, tune rest se pakda
+
+Ek aur simple formula:
+javascript
+
+// Jab use karo spread:
+let arr = [1, 2, 3];
+console.log(...arr)  // → 1 2 3  (Values alag ho gayi)
+
+// Jab use karo rest:
+function hello(...values) {  // → [1, 2, 3] (Values ikhatti ho gayi)
+    console.log(values);
+}
+hello(1, 2, 3)
