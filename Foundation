@@ -1,0 +1,361 @@
+text
+
+✅ Variables (var, let, const)
+✅ Data Types (Number, String, Boolean, etc.)
+✅ Operators (+, -, *, /, %, ==, ===, etc.)
+✅ Type Conversion
+✅ Comments
+
+2. Control Flow
+text
+
+✅ if-else statements
+✅ switch statement
+✅ for loop
+✅ while loop
+✅ do-while loop
+✅ break/continue
+
+3. Functions
+text
+
+✅ Function declaration
+✅ Function expression
+✅ Arrow functions
+✅ Parameters & Arguments
+✅ Return statement
+✅ Scope (Global, Local)
+
+4. Arrays & Objects
+text
+
+✅ Array methods (push, pop, shift, unshift)
+✅ Array iteration (forEach, map, filter)
+✅ Object properties & methods
+✅ this keyword basics
+✅ Object iteration (for-in)
+
+🌟 PHASE 2: Core Concepts (Phir Ye Padho)
+5. DOM Manipulation
+text
+
+✅ Selecting elements (getElementById, querySelector)
+✅ Changing content (textContent, innerHTML)
+✅ Changing styles (style.property)
+✅ Creating elements (createElement)
+✅ Removing elements (remove, removeChild)
+✅ Attributes (getAttribute, setAttribute)
+
+6. Events
+text
+
+✅ Event listeners (addEventListener)
+✅ Mouse events (click, mouseover, mouseout)
+✅ Keyboard events (keyup, keydown)
+✅ Form events (submit, change, input)
+✅ Event object
+✅ Event propagation
+
+7. Advanced Functions
+text
+
+✅ Callback functions
+✅ Higher-order functions
+✅ Closures
+✅ Hoisting
+✅ IIFE (Immediately Invoked Function)
+
+8. Strings & Numbers
+text
+
+✅ String methods (split, join, substring)
+✅ Template literals
+✅ Math methods
+✅ Date object
+✅ Number methods
+
+🌟 PHASE 3: Async JavaScript (Important for Interview)
+9. Async Basics
+text
+
+✅ Synchronous vs Asynchronous
+✅ setTimeout
+✅ setInterval
+✅ clearTimeout/clearInterval
+
+10. Callbacks
+text
+
+✅ Callback functions
+✅ Callback hell
+✅ Error handling in callbacks
+
+11. Promises (Zaroori Hai)
+text
+
+✅ Promise creation
+✅ Promise states (pending, fulfilled, rejected)
+✅ then() catch() finally()
+✅ Promise chaining
+✅ Promise.all()
+✅ Promise.race()
+✅ Promise.any()
+✅ Promise.allSettled()
+
+12. Async/Await
+text
+
+✅ async keyword
+✅ await keyword
+✅ Error handling with try-catch
+✅ Multiple awaits
+✅ Parallel execution
+
+13. Fetch API
+text
+
+✅ GET requests
+✅ POST requests
+✅ Headers
+✅ Error handling
+✅ Response methods (json(), text())
+
+🌟 PHASE 4: Advanced Concepts
+14. OOP in JavaScript
+text
+
+✅ Object literals
+✅ Constructor functions
+✅ Prototypes
+✅ Classes (ES6)
+✅ Inheritance
+✅ Getters/Setters
+✅ Static methods
+
+15. Error Handling
+text
+
+✅ try-catch
+✅ throw
+✅ finally
+✅ Custom errors
+
+16. Advanced Array Methods
+text
+
+✅ map()
+✅ filter()
+✅ reduce()
+✅ some()
+✅ every()
+✅ find()
+✅ findIndex()
+✅ sort()
+
+17. ES6+ Features
+text
+
+✅ Spread operator (...)
+✅ Rest parameters
+✅ Destructuring (array, object)
+✅ Default parameters
+✅ Template literals
+✅ Modules (import/export)
+
+🌟 PHASE 5: Browser APIs & Utilities
+18. Storage
+text
+
+✅ localStorage
+✅ sessionStorage
+✅ Cookies
+
+19. JSON
+text
+
+✅ JSON.stringify()
+✅ JSON.parse()
+✅ JSON vs Object
+
+20. Timing & Optimization
+text
+
+✅ Debouncing
+✅ Throttling
+✅ RequestAnimationFrame
+
+21. Advanced Events
+text
+
+✅ Event Bubbling
+✅ Event Capturing
+✅ Event Delegation
+✅ Custom Events
+
+🎯 Interview-Focused Topics (Jaldi Revision Ke Liye)
+text
+
+⚡ Most Important:
+1. Hoisting
+2. Closures
+3. Event Loop
+4. this keyword
+5. Prototypes
+6. Promises
+7. Async/Await
+8. Map/Filter/Reduce
+9. Spread/Rest
+10. Debouncing/Throttling
+
+⚡ Medium Importance:
+11. Call/Apply/Bind
+12. Currying
+13. Generators
+14. WeakMap/WeakSet
+15. Symbol
+
+⚡ Good to Know:
+16. Web Workers
+17. Service Workers
+18. Proxy
+19. Reflect
+20. Internationalization
+
+📅 7-Day Interview Preparation Plan
+Day 1: Basics + Functions
+text
+
+Morning: Variables, Data Types, Operators
+Evening: Functions, Scope, Hoisting
+Revision: Practice 10 coding questions
+
+Day 2: Arrays + Objects
+text
+
+Morning: Array methods (map, filter, reduce)
+Evening: Object methods, this keyword
+Revision: Practice 10 coding questions
+
+Day 3: DOM + Events
+text
+
+Morning: DOM manipulation
+Evening: Events, Event propagation
+Revision: Build a small project (To-Do list)
+
+Day 4: Async JS (Most Important)
+text
+
+Morning: Callbacks, Promises
+Evening: Async/Await, Fetch API
+Revision: Practice 3 API calls
+
+Day 5: Advanced Concepts
+text
+
+Morning: Closures, Prototypes
+Evening: OOP, Classes
+Revision: Practice OOP examples
+
+Day 6: ES6+ Features
+text
+
+Morning: Spread, Rest, Destructuring
+Evening: Modules, Error Handling
+Revision: Modern JS syntax practice
+
+Day 7: Revision + Mock Interview
+text
+
+Morning: All important topics revision
+Evening: Mock interview with yourself
+Night: Relax and confidence build
+
+📝 Practice Resources:
+Daily Practice:
+javascript
+
+// 1. Coding challenge har din
+// 2. 5 MCQ questions
+// 3. 1 small project
+
+// Example practice questions:
+// Q: Reverse a string
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
+// Q: Find max in array
+function findMax(arr) {
+    return Math.max(...arr);
+}
+
+// Q: Promise example
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+Mini Projects for Practice:
+text
+
+1. Calculator (DOM + Events)
+2. To-Do List (CRUD operations)
+3. Weather App (Fetch API)
+4. Stopwatch (setInterval)
+5. Form Validation (Events + Regex)
+6. Image Slider (DOM + setTimeout)
+7. Quiz App (Arrays + Objects)
+8. Expense Tracker (LocalStorage)
+
+✅ Checklist - Kya Aapko Ye Aata Hai?
+text
+
+[ ] Variables aur Data Types
+[ ] Functions aur Scope
+[ ] Arrays aur Objects
+[ ] DOM Manipulation
+[ ] Events
+[ ] Closures
+[ ] Promises
+[ ] Async/Await
+[ ] Fetch API
+[ ] Array Methods (map, filter, reduce)
+[ ] ES6 Features
+[ ] Error Handling
+[ ] this keyword
+[ ] Prototypes
+[ ] Classes
+[ ] Event Loop
+
+💡 Pro Tips for Interview:
+
+    Concepts Clear Rakho - Definition mat ratto, logic samjho
+
+    Examples Ready Rakho - Har topic ka apna example banao
+
+    Code Likho - Bas padhne se nahi hoga, run karo code
+
+    Explain in Hindi - Interview mein English mein samjhao, lekin socho Hindi mein
+
+    Confidence - "I don't know" bolne se achha, "I'll figure it out" bolo
+
+📞 Last Minute Revision Topics:
+text
+
+🔥 MUST KNOW:
+1. Event Loop ka diagram bana sakte ho?
+2. Promise vs Async/Await difference?
+3. Closures ka real-life example?
+4. this keyword kab change hota hai?
+5. map vs filter vs reduce?
+
+⚡ QUICK DEFINE:
+6. Hoisting kya hai?
+7. Debouncing kyun use karte hain?
+8. Prototype chain kya hai?
+9. Call, Apply, Bind mein difference?
+10. Event Bubbling vs Capturing?
+
+Kya aapko kisi specific topic ka detail chahiye? Ya koi topic samajh nahi aa raha? Main help kar sakta hoon! 🚀
+
+All the best for your interview! 💪
