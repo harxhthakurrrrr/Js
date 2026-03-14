@@ -1,0 +1,350 @@
+LEVEL 1 – BASIC (Foundation Strong)
+
+Variables (var, let, const)            //done
+
+Data Types (Primitive / Non-Primitive)               //Done
+
+Type Conversion                   //Done
+
+Operators                            //Done
+
+Conditions (if, switch) ////////////Done
+
+Loops (for, while, do while)  ///// Done
+
+Functions
+
+Function Declaration
+
+Expression
+
+Arrow Function
+
+Scope (Global / Local / Block)                 //Done
+
+Hoisting//Done
+
+Arrays (all methods)//// Done
+
+Objects (basic + nested)//// done
+
+👉 Yahan tak perfect hua = 50% JS clear
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+🚀 Function Advanced Roadmap
+1️⃣ this Deep (Most Important 🔥)
+
+Samajhna hoga:
+
+Normal function me this
+
+Object method me this
+
+Arrow function me this
+
+call / apply / bind me this
+
+Constructor me this
+
+Ye interview ka favourite topic hai.
+
+2️⃣ Closure (Memory Model Deep)
+
+Lexical Scope
+
+Function apne parent variable ko kaise yaad rakhta hai
+
+Private variable kaise bante hain
+
+Ye JS ka brain hai.
+
+3️⃣ Execution Context ////Done
+
+Global Execution Context /////Done
+
+Function Execution Context   ///// done
+
+Memory Phase /////////Done
+
+Code Phase //////////Done
+
+Ye samjhe bina advanced JS complete nahi hota.
+
+4️⃣ Call Stack/// Done
+
+Function kaise stack me push/pop hota hai
+
+Nested function calls ka flow
+
+5️⃣ Recursion
+
+Function khud ko call kare
+
+Base case
+
+Stack behavior
+
+6️⃣ First Class Function ///// done
+
+Function ko variable me store
+
+Function ko pass karna
+
+Function return karna
+
+7️⃣ Pure vs Impure Function is priceshow  is yes karna hai //// Done
+
+Side effects kya hote hain
+
+Clean coding concept
+
+🎯 Advanced Order (Best Learning Flow)
+
+this deep //// done
+
+Closure /// Done
+
+Execution Context /// DOne
+
+Call Stack//// Done
+
+Recursion /// Done
+
+Ye 5 clear ho gaye = Advanced Function Master 🔥
+
+Ab bata Harshu 😎
+Start kare this deep se? 💪
+
+🟡 LEVEL 2 – INTERMEDIATE
+
+ES6 Features
+
+Template literals/// Done
+
+Destructuring/// Done
+
+Spread / Rest // done
+
+Default parameters//// Done
+
+Array Methods Deep//Done
+
+map()/// Done
+
+filter()///Done
+
+reduce()///Done
+
+forEach()/// Done
+
+Callback Functions//// Done
+
+Higher Order Functions
+
+Execution Context ///  Done
+
+Call Stack/// Done
+
+Closures
+
+this keyword ///  Done
+
+Event Loop ////Done
+
+👉 Yahan tak samjha = Logic strong ho gaya 🔥
+
+🔵 LEVEL 3 – ADVANCED
+
+Asynchronous JS
+
+setTimeout
+
+setInterval
+
+Promises
+
+Async/Await
+
+DOM Manipulation
+
+Event Handling
+
+Event Bubbling / Capturing
+
+Debouncing / Throttling
+
+OOP in JS
+
+Constructor Function
+
+Prototype
+
+Classes
+
+Inheritance
+
+Error Handling (try-catch)
+
+Modules (import/export)
+
+JSON
+
+Fetch API
+
+🔴 LEVEL 4 – EXPERT SIDE
+
+Currying
+
+Memoization
+
+Polyfills
+
+Generators
+
+Iterators
+
+WeakMap / WeakSet
+
+Call / Apply / Bind
+
+Deep Copy vs Shallow Copy
+
+Garbage Collection
+
+Performance Optimization
+
+🏆 LEVEL 5 – REAL WORLD
+
+API Integration
+
+Authentication Basics
+
+LocalStorage / SessionStorage
+
+Browser Rendering
+
+JS Engine (V8 basics)
+
+🎯 Kaise Padhna Hai
+
+✔️ 1 Topic per Day
+✔️ 10 Programs per Topic
+✔️ README me explanation
+✔️ Sunday Revision
+
+Agar tu yeh pura karega…
+React, Node, Interviews — sab easy ho jayega 🔥
+
+Bol — kal se Level 1 start kare?
+Main daily topic deta rahunga 💪
+
+or do
+
+Harshu 🔥
+Tu serious lag raha hai… toh main aur deep topics bhi de raha hoon 💪
+
+Ab jo neeche aa raha hai woh real pro level JS hai 👇
+
+🟣 LEVEL 6 – DEEP CORE JAVASCRIPT
+
+Lexical Environment
+
+Scope Chain
+
+Temporal Dead Zone
+
+Memory Management
+
+Garbage Collection Internals
+
+Strict Mode
+
+Symbol Data Type
+
+Object Property Descriptors
+
+Object.freeze() vs seal()
+
+Reflect API
+
+🟤 LEVEL 7 – ADVANCED FUNCTIONAL JS
+
+Pure Functions
+
+Immutability
+
+Composition
+
+Recursion (Deep understanding)
+
+Tail Call Optimization
+
+Factory Functions
+
+Module Pattern
+
+IIFE
+
+⚫ LEVEL 8 – BROWSER DEEP DIVE
+
+Web APIs
+
+Event Loop Internals
+
+Microtask vs Macrotask
+
+MutationObserver
+
+IntersectionObserver
+
+Web Storage API
+
+Cookies
+
+CORS
+
+Same-Origin Policy
+
+🧠 LEVEL 9 – PRO ENGINE LEVEL
+
+JS Engine (V8 Internals)
+
+Just-In-Time Compilation
+
+Hidden Classes
+
+Inline Caching
+
+De-optimization
+
+Call by Value vs Call by Reference
+
+Memory Leak Detection
+
+Profiling & Performance Tools
+
+🏆 LEVEL 10 – MASTER LEVEL
+
+Web Workers
+
+Service Workers
+
+IndexedDB
+
+Streams API
+
+WebSockets
+
+Proxy
+
+Reflect
+
+Decorators (proposal)
+
+Tree Shaking
+
+Bundlers (Webpack basics understanding)
