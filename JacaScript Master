@@ -17257,3 +17257,28 @@ button.addEventListener("click", function() {
   console.log("Button click handled!");
   alert("Button dabaya gaya!");
 });
+
+
+
+Event Delegation:-
+👉 Parent element pe event lagake child elements ko handle karna
+👉 Isko bolte hain Event Delegation
+<ul id="list">
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+document.getElementById("list").addEventListener("click", (e) => {
+  console.log(e.target.innerText);
+});
+
+
+👉 Kisi bhi li pe click karo → parent handle karega ✔
+
+⚡ Kyun use karte hain?
+
+👉 Performance better
+👉 Dynamic elements (baad me add hone wale items bhi kaam karte hain)
+
+💡 Easy Language
+
+👉 “Har child pe event lagane ki jagah → ek parent pe laga do”
