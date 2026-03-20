@@ -17282,3 +17282,318 @@ document.getElementById("list").addEventListener("click", (e) => {
 💡 Easy Language
 
 👉 “Har child pe event lagane ki jagah → ek parent pe laga do”
+
+
+
+
+
+OOPs Kya Hai?:-
+OOPs ka full form hai "Object-Oriented Programming System"
+
+
+oops ek programming style haiu jisme ham hum apnbe project ko object and class ke form me likhte hai object ka mtlab hota hai real world cheezio ko jaise car mobile etc ko likhe ka tarika 
+
+Example 1: Bina OOPs Ke (Procedural Style)
+
+Jaise aap ghar banane ka socho. Agar aap bina plan ke, alag-alag materials lekar banane lagoge:
+
+    Cement yahan, bricks wahan, door alag se, window alag se
+
+    Koi organization nahi
+
+    Agar ek cheez bigad gayi toh sab bigad jayega
+
+Example 2: OOPs Ke Saath
+
+OOPs mein aap pehle ek blueprint (class) banate ho:
+
+    "Ghar" ka blueprint: ismein hoga door, window, room, bathroom
+
+    Phir us blueprint se objects banate ho: MeraGhar, TumharaGhar, etc.
+
+    Har object apne aap mein complete hai
+
+    Agar ek ghar mein kuch badalna hai toh doosre ghar par effect nahi padega
+
+
+
+
+Iska Simple Ham Classbaante hai jisse Ham uske ek blueprint print hota hai ki hamko kaise baan ahai fir uska object bane hai real 
+
+
+Example:-
+class Car {
+  constructor(color) {
+    this.color = color;
+  }
+}
+
+const car1 = new Car("Red");
+
+
+OOP ke 4 main concepts (important):-
+
+Encapsulation → Data ko safe rakhna
+
+Abstraction → Sirf important cheeze dikhana
+
+Inheritance → Ek class dusri se properties le sakti hai
+
+Polymorphism → Same function, different behavior
+
+
+
+Jss ham progamiing muplti[le typee object ortened programimg and function progamming line by line program be hote hai phle jio hamr ereact tha oops  pe be based tha but 3-4 me yeh function progamimg me ho gaya function se hamko sajmne me aasanihote hai 
+
+Programming ke types kya hote hain?
+
+Procedural / Line-by-line (Normal) Programming
+👉 Step by step code chalta hai
+
+
+Functional Programming
+👉 Sab kuch functions ke through hota hai
+👉 Data ko change kam karte hain (immutable)
+
+OOP (Object Oriented Programming)
+👉 Code ko objects & classes me organize karte hain
+
+
+| OOP                               | Functional                  |
+| --------------------------------- | --------------------------- |
+| Large apps, complex systems       | UI (React), data processing |
+| Backend, games, OOP-heavy systems | Modern frontend             |
+
+
+| OOP                 | Functional              |
+| ------------------- | ----------------------- |
+| "Object kya hai?"   | "Kaam kaise hoga?"      |
+| Real-world modeling | Logic & transformations |
+
+
+
+
+
+Main Qesution every time come into my mind 
+Ham OOP kyu padh raha hai?
+
+👉 Kyuki OOP foundation hai programming ka
+
+Backend (Node.js, Java, C#) → OOP heavy
+
+Large projects → OOP structure deta hai
+
+Interview → OOP questions pakke aate hain
+
+
+
+👉 BUT internally:
+➡️ React ka concept (state, lifecycle) OOP thinking se hi aaya hai
+
+
+4 Pillars Kya Hain?
+
+4 Pillars OOPs ki foundation hain. Jaise kisi building ki 4 main columns hoti hain, waise hi OOPs ki 4 pillars hain:
+
+    Encapsulation (Data Hiding)
+
+    Abstraction (Complexity Hiding)
+
+    Inheritance (Reusability)
+
+    Polymorphism (Flexibility)
+
+🔥 Pehle: inka use kyu karte hain?
+
+👉 Inka use hota hai:
+
+Code secure karne ke liye 🔒
+
+Code simple banane ke liye
+
+Code reuse karne ke liye
+
+Bade project ko manage karne ke liye
+
+
+
+Pillar 1: Encapsulation:
+
+Encapsulation ka use hota hai Data Protect karne ke liye jaise  man lo jaise apka bank account number hai koi usko directy change nahi karta change karne ke liye sirf bank ke method se kar sakhta hai 
+
+
+Use :-
+Data Ko Unauthroized access se bachne ke liye 
+Security provide karne ke liye 
+dat aur methods ko ek sath bind karne ke liye 
+example:-
+class BankAccount {
+    // Private variable - bahar se direct access nahi
+    #balance = 0;
+    
+    constructor(name) {
+        this.name = name;
+    }
+    
+    // Public methods - inse hi balance access hoga
+    deposit(amount) {
+        if(amount > 0) {
+            this.#balance += amount;
+            console.log(`Deposited: ₹${amount}`);
+        }
+    }
+    
+    withdraw(amount) {
+        if(amount <= this.#balance) {
+            this.#balance -= amount;
+            console.log(`Withdrawn: ₹${amount}`);
+        } else {
+            console.log("Insufficient balance");
+        }
+    }
+    
+    getBalance() {
+        return this.#balance;
+    }
+}
+
+let myAccount = new BankAccount("Raj");
+myAccount.deposit(5000);
+myAccount.withdraw(2000);
+console.log(myAccount.getBalance()); // 3000
+
+// ❌ Direct access nahi kar sakte
+// console.log(myAccount.#balance); // Error!
+
+
+
+Pillar 2: Abstraction:-
+
+Complexity ko chhupane ke liye sirf essential chj ko dekhe ke liye jaise car drive karte ho streeing wheel accelerator dekh sakhte hai par jo main part kao engine uske nahi dkeha sakhte hai ham 
+
+Use :-
+Complexity Hide  karne ke liye 
+User ko simple Inferface dene ke liye 
+
+
+
+Example:-
+class Car {
+    // Ye complex functions user se chhupe hain
+    #startEngine() {
+        console.log("1. Fuel injector on");
+        console.log("2. Spark plug ignite");
+        console.log("3. Engine started");
+    }
+    
+    #checkFuel() {
+        console.log("Fuel level checked");
+    }
+    
+    #engageGear() {
+        console.log("Gear engaged");
+    }
+    
+    // User sirf ye simple method dekhta hai
+    startCar() {
+        console.log("🔑 Pressing start button...");
+        this.#checkFuel();
+        this.#startEngine();
+        this.#engageGear();
+        console.log("🚗 Car is ready to drive!");
+    }
+}
+
+let myCar = new Car();
+myCar.startCar(); // Simple - sirf ye call karna hai
+
+// ❌ User ko engine se kya lena
+// myCar.#startEngine(); // Error - hidden
+
+
+
+
+
+
+
+
+Pillar 3: Inheritance:-
+Parent class ki  kuch properties child class le sakhte hai jisse bacha apna parent se gun le leta hai 
+
+
+
+Use   :-
+Code KI Reusabilty Karne ko 
+Cont Repeat Yourself 
+
+
+Example:-
+class Animal {
+  eat() {
+    console.log("Eating");
+  }
+}
+
+class Dog extends Animal {}
+
+
+Pillar 4: Polymorphism:-
+
+Kya Hai?
+
+Ek method, multiple forms. Jaise "sound()" method dog mein "bark", cat mein "meow" karega.
+Kyun Use Karte Hain?
+
+    Flexibility
+
+    Same interface, different behavior
+
+    Code extensibility
+
+
+
+Example :-
+class Animal {
+  sound() {
+    console.log("Some sound");
+  }
+}
+
+class Dog extends Animal {
+  sound() {
+    console.log("Bark");
+  }
+}
+
+class Cat extends Animal {
+  sound() {
+    console.log("Meow");
+  }
+}
+
+const d = new Dog();
+d.sound(); // Bark
+
+const c = new Cat();
+c.sound(); // Meow
+
+
+
+🔹 Polymorphism kya hota hai?
+
+👉 Same function / method → different behavior
+
+🔹 Real-life example
+
+👉 “Sound” word use karte hain:
+
+Dog → Bark 🐶
+
+Cat → Meow 🐱
+
+👉 Function same: sound()
+👉 Output alag-alag
+
+
+
+
