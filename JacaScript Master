@@ -18542,3 +18542,266 @@ function* numbers() {
 jaise maan ko mere array me 1billon value hai m chata hu vo tab chale jab ,muje uski jarut ho jb  me call tabhi vo next value agar normal   function baanuga to   to ek saatyhn saare data ko ek baari me print kaara dega or ek baar value return kar deg a par hamra gentor function isko avoid karta hai yeh *start se dekha jaata hai isme yield hota hota hai vi kya us e value ko  pause karke rakhta hai jab uske jarut hogi tabhi vo usko caall karte time resume kar dega 
 
 
+
+
+Polyfill:-
+Polyfill In JavaScript Filling the Gap Between Insida The Old Brower To  New Brower
+PolyFiils Ek JavaScript Code ka Chota Se tukda Hota Hai JO Purane Browers Mein naya JavaScript Ke feature Ko Chalne ke Liye Hota hai
+yani modern brower me jo cheez phle se baani hote hai vo purane brower me nahi  hoti hai polyfills us gap ko fill karne ka kaam karte hai jaise maaan lo abhi mere brower me map method aache se kaam kar raha hai par meremachine me aache se chal raha hai koi user hai uske jo brower hai vo full updated nahi vo brower me IE !! ya old version use karta hai vo support karta hai us gap ko fill karne ke liye Ham apna ek Kud map method baanega jo hamre old brower me support karege jaise naaya brower me chal raha hai abise same to same pure brower me chalega
+Promise
+Purane browsers mein Promise nahi hota → async/await bhi nahi chalta sahi se.
+Polyfill Promise add kar deta hai.
+Fetch API (modern way to call API)
+   Old browsers mein XMLHttpRequest use karna padta tha → fetch polyfill se fetch() direct use kar sakte ho
+
+Polyfill vs Transpiler (Babel) –
+
+
+Babel = code ko translate karta hai (naya syntax → purana syntax)
+
+
+Polyfill = missing cheezon ko browser mein daal deta hai (jaise naye tools add karna)
+
+
+
+
+Polyfill:-
+Missing functions/methods add karta hai (runtime pe)
+Example Promise, fetch, includes() nahi hai? → add kar do
+
+
+Transpiler (jaise Babel):-
+Syntax ko purana bana deta hai (build time pe)
+
+const x = 10; → var x = 10; bana deta hai
+
+
+Kaise use karte hain real project mein?
+
+Manual polyfill (chhote projects)
+
+
+Upar wala code copy-paste kar do file mein.
+
+
+Best way – core-js + Babel (sabse common)Bash
+npm install core-js
+Babel config mein
+ .babelrc or babel.config.json
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "useBuiltIns": "usage",   // auto polyfills add karega
+      "corejs": 3
+    }]
+  ]
+
+
+
+Polyfills ka use na karke side brower ko updated na kar lu
+
+
+Agar tu sirf apne browser ko update kar le to?
+Haan, tere personal browser (Chrome, Edge, Firefox latest) mein update karne se sab modern JS features (Promise, fetch, includes, flat, async/await, optional chaining etc.) pehle se hi chal jayenge.
+Polyfill ki zarurat bilkul nahi padegi tere machine pe.
+Tu code likh sakta hai modern tareeke se bina kisi extra code ke.
+
+
+
+Kyun polyfills ab bhi zaroori hain (2026 mein bhi)?
+
+
+Users browsers update nahi karte
+
+Bahut log Chrome ka version 2-3 saal purana use karte hain (slow PC, company policy, ya bas bhool gaye).
+
+Enterprise companies (bank, government, big offices) mein browsers lock hote hain – IT team allow nahi karti update.
+
+
+
+Old browsers ab bhi exist karte hain
+
+IE11 officially dead hai (2022 se), lekin kuch internal tools ya legacy systems mein ab bhi chal raha hai.
+
+Safari iOS pe kabhi-kabhi late update hota hai.
+
+Analytics check kar (Google Analytics ya SimilarWeb) – agar tere users mein 1-5% bhi old browser se aate hain, to site break ho sakti hai.
+
+
+
+
+Example   :-
+  Ham Map Ke Polyfills baana rahe hai
+
+
+if (!Array.prototype.map) {
+  Array.prototype.map = function(callback) {
+    let result = [];
+
+    for (let i = 0; i < this.length; i++) {
+      result.push(callback(this[i], i, this));
+    }
+
+    return result;
+  };
+}
+
+
+
+Flow kaise chalega is  Code
+Polyfill (Array.map) Flow:
+
+1. Check karo ki browser me map method exist karta hai ya nahi
+   if (!Array.prototype.map)
+
+2. Agar nahi hai, to Array ke prototype me apna custom map function add karo
+   Array.prototype.map = function(callback)
+
+3. Ek empty array banao jisme result store hoga
+   let result = [];
+
+4. Loop chalao current array ke har element par
+   for (let i = 0; i < this.length; i++)
+
+5. Har element par callback function apply karo
+   callback(this[i], i, this)
+
+6. Jo value mile usko result array me push karo
+   result.push(...)
+
+7. Last me result array return karo
+   return result;
+
+---
+
+Short Flow:
+Check → Add Method → Loop → Apply Callback → Store → Return
+
+---
+
+One Line:
+Input array → process → new array output
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+Memoization:-
+Kisse kaam ko Baaar Baar Karne se bajay uska Result Ek jagha Yaad Rakhne  ke Liye
+Tumne Ek Baar Calculate liya 5*2 = 10
+ab koi be Fir se puchta hai tum dubhra calculate nahi karoge tum seedha bolege 10 yehihota hai merozization
+
+Example:-
+
+Without memorization:-
+
+function double(n) {
+  console.log("calculating...");
+  return n * 2;
+}
+
+double(5); // calculating...
+double(5); // phir se calculating...
+
+
+
+With memorization:-
+
+function memoDouble(n){
+      let cache = {}
+       return function(){
+       If(cache[n]){
+console.log("from  cache"
+return cache[n]
+}
+ 
+console.log("cacluation)
+
+let result = n * 2;
+cache[n] = Result
+return result;
+
+}
+
+let fn = memoDouble();
+
+   fn(5); // calculating...
+fn(5); // from cache
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+
+
+
+Currying:-
+its Serios Of function that each take one agrmnenet at time
+
+Currying ek technique hai jisme hum ek function ko multiple arguments lene ki jagah, ek-ek argument lene wale functions ki chain mein convert kar dete hain. Har function ek argument leta hai aur agla function return karta hai. Jab saare arguments aa jate hain, tab final value return hoti hai.
+
+// Normal
+function sum(a, b, c) {
+  return a + b + c;
+}
+
+// Currying
+function sum(a) {
+  return function(b) {
+    return function(c) {
+      return a + b + c;
+    };
+  };
+}
+
+sum(1)(2)(3); // 6
+///////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+Performance Optimization:-
+
+Code ko fast, smooth aur kam memory use karne wala banana
+1. Caching / Memoization
+const cache = {};
+function sum(a, b) {
+  const key = a + "," + b;
+  if (cache[key]) return cache[key];
+  return cache[key] = a + b;
+}
+🔹 2. Debouncing (search / API)
+
+const debounce = (fn, delay) => {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), delay);
+  };
+};
+
+🔹 3. Throttling
+const throttle = (fn, limit) => {
+  let flag = true;
+  return () => {
+    if (!flag) return;
+    fn();
+    flag = false;
+    setTimeout(() => flag = true, limit);
+  };
+};
+
+
+DOM Manipulation me Performance Optimization
+
+// ❌ slow
+document.getElementById("id").innerText = "Hi";
+document.getElementById("id").style.color = "red";
+
+
+// ✅ fast
+const el = document.getElementById("id");
+el.innerText = "Hi";
+el.style.color = "red";
+
+/////////////////////////////////////////////////////////////////////////////////
+
+
