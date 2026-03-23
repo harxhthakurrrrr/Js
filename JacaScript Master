@@ -18804,4 +18804,155 @@ el.style.color = "red";
 
 /////////////////////////////////////////////////////////////////////////////////
 
+Call / Apply / Bind:-
+Yeh 3 method use hote Hai Function Ka this ko control karne ke liye 
+And 3 Method Function Borrwing or this  ke  alag alag context me use karne ke liye bhoot
+kaam aate hai  
+
+
+Function Borrowing:-
+jab kisse bject ka method ham kisse dusre function me use karkar skhte haiusko ham function borrwing khate hai
+
+
+let person1 = { name: "Harsh" };
+let person2 = { name: "Rahul" };
+
+function printName() {
+console.log(this.name);
+}
+
+printName.call(person1);   // "Harsh"
+printName.call(person2);   // "Rahul"
+
+bind() vs call() vs apply() — सिर्फ timing में फर्क
+
+Method	नया function बनाता है?	नया function बनाता है?	नया function बनाता है?	नया function बनाता है?
+call	नहीं	हाँ	function का resul	नया bound function
+apply	नहीं	हाँ	function का resul	नया bound function
+bind                हाँ                 नहीं           नया bound function    भविष्य में इस्तेमाल के लिए
+
+
+
+Use:-1
+ek Object Ke method DusreObject me use Karne  ke Liye 
+
+
+
+Use 2:-
+Same Function Ko Mupltiple Object Ke sath Reuse karne ke liye 
+
+
+
+🔹 1. call()
+
+👉 function ko direct call karta hai + arguments alag-alag deta hai
+Example:-
+const person = { name: "Harsh" };
+
+function greet(age) {
+  console.log(this.name, age);
+}
+
+greet.call(person, 21); // Harsh 21
+//////////////////////////////////////////////////////////////////////////////////////////
+
+const obj1 = {
+  name: "Harsh",
+  greet: function() {
+    console.log("Hello " + this.name);
+  }
+};
+
+const obj2 = {
+  name: "Rahul"
+};
+
+// Borrow
+obj1.greet.call(obj2); // Hello Rahul
+
+2. apply()
+
+call jaisa hi hai, bas arguments array me deta hai
+
+const person = { name: "Harsh" };
+
+function greet(age) {
+  console.log(this.name, age);
+}
+
+
+greet.apply(person , [21]);
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+3. bind()
+
+function ko copy karke return karta hai (baad me call karte hai)
+
+
+const person = { name: "Harsh" };
+
+function greet(age) {
+  console.log(this.name, age);
+}
+
+
+const newFunc = greet.bind(person);
+
+newFunc(21); // Harsh 21
+
+
+
+////////////////////////////////////////////////////////////////////////////////////
+Deep Copy vs Shallow Copy:-
+
+
+🔹 Shallow Copy
+
+👉 Sirf top level copy hoti hai
+👉 Nested object ka reference same rehta hai
+Example:-
+
+
+const obj1 = {
+  name: "Harsh",
+  address: { city: "Delhi" }
+};
+
+const obj2 = { ...obj1 };
+
+obj2.address.city = "Mumbai";
+
+console.log(obj1.address.city); // Mumbai ❌
+
+
+🔹 Deep Copy
+
+👉 Pure object ki alag copy banti hai
+👉 koi reference share nahi hota
+
+
+const obj1 = {
+  name: "Harsh",
+  address: { city: "Delhi" }
+};
+
+const obj2 = JSON.parse(JSON.stringify(obj1));
+
+obj2.address.city = "Mumbai";
+
+console.log(obj1.address.city); // Delhi ✅
+
+
+
+🔥 Difference ek line me:
+
+👉 Shallow → reference share
+👉 Deep → full independent copy
+
+
+
+
+Shallow copy sirf outer copy karti hai aur nested ka reference share karti hai, jabki deep copy pura object alag bana deti hai aur koi reference share nahi hota.
+///////////////////////////////////////////////////////////////////////////////////////////
 
