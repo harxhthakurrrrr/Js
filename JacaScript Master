@@ -19270,3 +19270,224 @@ Aapne sahi kaha — cookies 3 categories mein divide hoti hain:
 
     Google Analytics, Facebook Pixel iske under aate hain
 
+
+Lexical Environment:_
+Lexical Environment Yeh Hota Hai Jab Koi Function Phle Baaar Create Hota Hai To Vo Ek Environmenet baanta hai {} iski Curly Bracket Hi Hote hai Isme Variable Store Hote Hai Jo Usse Function Ke Andar Available Hote hai 
+
+
+Example:-
+// Jab ye function banega, iska apna Lexical Environment create hoga
+function myFunction() {
+  let name = "Rahul";  // Ye variable is environment mein store hoga
+  let age = 25;        // Ye bhi isi environment mein
+}
+
+// Har function ka apna Lexical Environment hota hai
+
+Lexical Scope :-
+Lecical Scope Btaya Ki Tum apne Variable Ko Kaha Access Kar sakhte Ho Rule Yeh Hote hai - Inner Function Jo Hai Vo  apne Parent Function Ke variable Ko Acces Kar sakhta hai Lekin Parnet Jo Hai Vo Apne Parent Apne Inner Function ek variable Ko Acces kar sakhte hai 
+
+
+✅ Inner function ko outer function ke variables access hote hain
+function parent() {
+  let parentVar = "I am from parent";  // Parent ka variable
+  
+  function child() {
+    // ✅ Child ko parent ka variable access hai
+    console.log(parentVar);  // "I am from parent"
+
+  }
+
+
+  
+  child();
+}
+
+parent();
+
+❌ Outer function ko inner function ke variables access nahi hote
+
+Example:-
+function parent() {
+  function child() {
+    let childVar = "I am from child";
+  }
+  
+  // ❌ Ye kaam nahi karega
+  console.log(childVar);  // Error! childVar defined nahi hai
+}
+
+parent();
+
+
+Scope Chain :-
+Scope Chain  Ek Proccess Hote hai jab inner function koi variable dhundhta hai, to wo pehle apne scope mein dekhta hai, phir parent mein, phir grand parent mein, aise global tak chain continue karta hai. Ye lexical environment ki chain hoti hai.
+
+Example:-
+let global = "Global Variable";  // Global scope
+
+function parent() {
+  let parentVar = "Parent Variable";
+  
+  function child() {
+    let childVar = "Child Variable";
+    
+    console.log(childVar);   // ✅ Mil gaya — apne scope mein
+    console.log(parentVar);  // ✅ Mil gaya — parent scope mein
+    console.log(global);     // ✅ Mil gaya — global scope mein
+  }
+  
+  child();
+}
+
+parent();
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+Memory Management:-
+Memory Management ka matlab hai program me memory ko allocate (dena) aur free (hatana) karna
+
+🔹 Simple samajh lo 🔥
+
+👉 Jab variable banate ho → memory allocate hoti hai
+👉 Jab use nahi hota → memory free ho jati hai
+
+🔹 JavaScript me kaise hota hai?
+
+👉 JavaScript me automatic memory management hota hai
+➡️ Isko bolte hai Garbage Collection
+
+
+Example:-
+let a = 10;  // memory allocate
+
+a = null;    // ab memory free hone ke liye ready
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Strict Mode :-
+
+Strict Mode ek special mode hai jo JavaScript ko zyada safe aur error-free banata hai
+
+"use strict";
+
+
+1. Variable Bina Declare Nahi Kar Sakte
+
+// ❌ Normal Mode
+x = 10;  // Allowed (global variable ban jata hai)
+console.log(x);  // 10
+
+// ✅ Strict Mode
+"use strict";
+x = 10;  // ❌ ERROR! x is not defined
+// Variable pehle declare karna hoga
+let x = 10;  // ✅ Correct
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Symbol Data Type:-
+
+Symbol Data Type ek Primitive data Type Hota hai Jo unique Value karta hai Har Symbol Unique Hote hai chaiye value same kyo na ho tumri
+
+
+Example:-
+let a = Symbol("id");
+let b = Symbol("id");
+
+console.log(a === b); // false ❌ (unique hai)
+let a = Symbol("5");
+let b = Symbol("5");
+
+console.log(a === b); // false ❌
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Object.freeze() vs Object.seal():-
+
+1. Object.freeze() na isme Ham Value chnage karte na update hote hai na Delete Hote hai 
+
+Example:-
+const obj = { name: "Harshu" };
+
+Object.freeze(obj);
+
+obj.name = "Rahul";   // ❌ change nahi hoga
+obj.age = 20;         // ❌ add nahi hoga
+delete obj.name; 
+Object.seal():-
+Imse Bas Ham Value Updated karte sakhte hai Na kuch add or delelct  kar sakhte hai
+
+const obj = {
+name : "harsh"
+}
+Object.seal(obj);
+
+
+obj.name = "Harsh" // Ho jaayega 
+obj.age  = 20;
+delete obj.name;
+
+
+👉 freeze → delete ❌, change ❌, add ❌
+👉 seal → delete ❌, change ✅, add ❌
+
+
+
+
+Factory Function:-
+ vo function jo hamse ek Object Return karte haiFactoryFunction ek function hota hai jo object create karke return karta hai
+
+function createUser(name, age) {
+  return {
+    name: name,
+    age: age
+  };
+}
+
+const user1 = createUser("Harshu", 22);
+const user2 = createUser("Rahul", 25);
+
+console.log(user1);
+console.log(user2);
+
+Kya ho raha hai?
+
+👉 Har baar function call → naya object create ho raha hai ✅
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+Reflect Api  :-
+Reflect APi ek Build In Object Hai Jo JavaScript Me Object Operations Ko Perform Karne Ka  Ek CLearn Our Consistent Way hote hai 
+
+
+👉 Iski help se hum:
+
+Object ka data get kar sakte hain
+Data set/update kar sakte hain
+Property delete kar sakte hain
+Nayi property add kar sakte hain
+
+
+Example:-
+const obj = { name: "Harshu" };
+
+Reflect.get(obj, "name");        // get
+Reflect.set(obj, "age", 22);     // add/update
+Reflect.deleteProperty(obj, "name"); // delete
+////////////////////////////////////////////////////////////////////
+Mutable vs Immutable
+🔹 Mutable
+Data ko directly change kar sakte hain
+Original value modify ho jati hai
+
+👉 Example:
+let obj = { name: "Harshu" };
+obj.name = "Rahul"
+
+Immutable
+Data ko change nahi karte
+Naya copy/object create karte hain
+
+👉 Example:
+let obj = { name: "Harshu" };
+let newObj = { ...obj, name: "Rahul" };
+
+
+
