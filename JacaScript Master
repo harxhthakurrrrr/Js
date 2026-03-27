@@ -19488,6 +19488,4 @@ Naya copy/object create karte hain
 👉 Example:
 let obj = { name: "Harshu" };
 let newObj = { ...obj, name: "Rahul" };
-
-
-
+End 
